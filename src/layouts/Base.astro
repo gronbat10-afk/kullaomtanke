@@ -55,7 +55,10 @@ const business = {
   <header class="site-header">
     <div class="wrap">
       <a class="logo" href="/" aria-label="Kulla Omtanke, till startsidan"><img src="/img/kulla-omtanke-logo-640.png" alt="Kulla Omtanke" width="149" height="72" /></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="huvudmeny">Meny</button>
+      <div class="header-actions">
+        <a class="call-mobile" href={`tel:${site.phoneIntl}`}>Ring</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="huvudmeny">Meny</button>
+      </div>
       <nav class="nav" id="huvudmeny" aria-label="Huvudmeny">
         {nav.map((n) => <a href={n.href}>{n.label}</a>)}
         <a class="call" href={`tel:${site.phoneIntl}`}>Ring oss</a>
