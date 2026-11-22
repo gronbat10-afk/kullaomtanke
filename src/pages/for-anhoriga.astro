@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import Faq from '../components/Faq.astro';
+import { site } from '../data/site.js';
+const faq = [
+  { q: 'Kan jag boka även om jag inte bor i närheten?', a: 'Ja, de flesta som bokar åt en förälder bor på annan ort. Vi sköter kontakten på plats och håller dig uppdaterad via sms eller mejl.' },
+  { q: 'Får jag RUT-avdrag om jag betalar för min förälder?', a: 'Ja. Du kan få RUT-avdrag för tjänster i din förälders hem, även när det är du som betalar. Avdraget görs direkt på fakturan.' },
+  { q: 'Vad står i besöksrapporten?', a: 'Vad ni gjorde, hur din förälder verkade må och om något behöver följas upp, till exempel att medicinen snart tar slut eller att en lampa behöver bytas.' },
+  { q: 'Vad händer om min förälder inte vill ha hjälp?', a: 'Det är vanligt i början. Därför börjar vi med ett kostnadsfritt första möte där vi bara fikar och lär känna varandra. Många ändrar sig när det känns som ett besök och inte som hjälp.' },
+];
+const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }];
+---
+<Base title="För anhöriga: hjälp till din äldre förälder i Kullabygden | Kulla Omtanke" description="Bor du långt från din mamma eller pappa i Höganäs eller Ängelholm? Vi besöker, hjälper till och skickar en rapport efter varje besök. RUT-avdrag även när du betalar." schema={schema}>
+  <div class="wrap page-hero stack">
+    <p class="breadcrumbs"><a href="/">Start</a> / För anhöriga</p>
+    <h1>Hjälp till din mamma eller pappa, även när du bor långt bort</h1>
+    <p class="lead">Oron för en förälder som sitter ensam är tung att bära på avstånd. Vi blir en extra närstående på plats i Kullabygden, och du får veta hur det går efter varje besök.</p>
+    <div class="btn-row"><a class="btn btn-primary" href="/kontakt/">Boka ett första möte</a><a class="btn btn-outline" href={`tel:${site.phoneIntl}`}>Ring {site.phone}</a></div>
+  </div>
+  <section class="section white">
+    <div class="wrap split">
+      <div class="a prose">
+        <h2>Du får en rapport efter varje besök</h2>
+        <p>Efter varje besök skickar vi ett kort sms eller mejl. Du vet vad ni gjorde, hur din förälder verkade må och om något behöver följas upp.</p>
+        <h2>Tecken på att det behövs lite mer hjälp</h2>
+        <ul>
+          <li>Kylskåpet är tomt eller fullt av gammal mat</li>
+          <li>Hon eller han går sällan ut längre</li>
+          <li>Telefonen eller tv:n krånglar och blir liggande</li>
+          <li>Posten och räkningarna samlas på hög</li>
+          <li>Samtalen handlar mest om att dagarna är långa</li>
+        </ul>
+        <h2>Du betalar, med RUT-avdrag</h2>
+        <p>Du kan boka och betala själv och ändå få RUT-avdrag för tjänster i din förälders hem. Fakturan kommer en gång i månaden med avdraget redan gjort. <a href="/priser-och-rut/">Se priser</a>.</p>
+      </div>
+      <div class="b report">
+        <p class="label">Exempel på besöksrapport</p>
+        <div class="bubble">Hej! Idag var jag hos din pappa 10.00 till 12.00. Vi handlade på Ica och tog en kaffe i hamnen. Han var pigg och pratade mycket om båtarna. Skrivaren fungerar igen. Vi ses på tisdag.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section"><div class="wrap stack"><Faq items={faq} /></div></section>
+</Base>

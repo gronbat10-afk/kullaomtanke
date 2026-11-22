@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import Faq from '../components/Faq.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import { site } from '../data/site.js';
+const faq = [
+  { q: 'Behövs ett biståndsbeslut?', a: 'Nej. Ni bokar direkt hos oss, precis som vilken annan tjänst som helst.' },
+  { q: 'Kan man ha både hemtjänst och Kulla Omtanke?', a: 'Ja, det är vanligt. Hemtjänsten sköter omvårdnaden och vi står för sällskap, promenader och vardagshjälp däremellan.' },
+  { q: 'Gör ni vård eller omvårdnad?', a: 'Nej. Vi hjälper inte till med medicinering, personlig hygien eller annan omvårdnad. Det sköter hemtjänsten.' },
+];
+const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }];
+---
+<Base title="När hemtjänsten inte räcker till | Privat komplement i Höganäs och Ängelholm" description="Hemtjänsten hinner det nödvändiga. Kulla Omtanke ger tiden däremellan: sällskap, promenader, ärenden och teknikhjälp. Utan biståndsbeslut, med RUT-avdrag." schema={schema}>
+  <div class="wrap page-hero stack">
+    <p class="breadcrumbs"><a href="/">Start</a> / Komplement till hemtjänsten</p>
+    <h1>När hemtjänsten inte räcker till</h1>
+    <p class="lead">Hemtjänsten gör ett viktigt jobb, men tiden räcker sällan till mer än det mest nödvändiga. Kulla Omtanke är ett privat komplement som ger tid, sällskap och vardagshjälp, utan biståndsbeslut.</p>
+    <div class="btn-row"><a class="btn btn-primary" href="/kontakt/">Boka ett första möte</a><a class="btn btn-outline" href={`tel:${site.phoneIntl}`}>Ring {site.phone}</a></div>
+  </div>
+  <section class="section white">
+    <div class="wrap prose">
+      <h2>Hemtjänsten och vi gör olika saker</h2>
+      <ul>
+        <li><strong>Hemtjänsten:</strong> omvårdnad, medicin, personlig hygien och insatser enligt biståndsbeslut.</li>
+        <li><strong>Kulla Omtanke:</strong> sällskap, promenader, ärenden, teknikhjälp och tvätt, med samma person och gott om tid.</li>
+      </ul>
+      <h2>Tiden däremellan</h2>
+      <p>Det är ofta mellan hemtjänstens besök som dagarna känns långa. Ett återkommande besök från oss ger något att se fram emot, mer rörelse och någon som märker om något förändras.</p>
+      <h2>Ingen ansökan behövs</h2>
+      <p>Ni bokar direkt hos oss. Det enda vi behöver är ett första möte för att lära känna varandra. Priset är {site.hourly} kr i timmen inklusive moms efter RUT-avdrag. <a href="/priser-och-rut/">Läs om priser och RUT</a>.</p>
+    </div>
+  </section>
+  <section class="section"><div class="wrap stack"><h2>Det här kan vi hjälpa till med</h2><ServiceCards /></div></section>
+  <section class="section white"><div class="wrap stack"><Faq items={faq} /></div></section>
+</Base>

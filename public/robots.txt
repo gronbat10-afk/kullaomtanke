@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kullaomtanke.se/sitemap-index.xml

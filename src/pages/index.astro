@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import Faq from '../components/Faq.astro';
+import ContactForm from '../components/ContactForm.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import { site, places, faqGeneral, plans } from '../data/site.js';
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faqGeneral.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Base title="Kulla Omtanke | Sällskap och vardagshjälp för äldre i Höganäs och Ängelholm" description="En extra närstående för din mamma eller pappa. Sällskap, promenader, ärenden och teknikhjälp för äldre i Höganäs kommun och Ängelholm. 290 kr/tim efter RUT." schema={[faqSchema]} cta={false}>
+  <div class="wrap hero">
+    <div class="text">
+      <p class="kicker">Sällskap och vardagshjälp i Höganäs och Ängelholm</p>
+      <h1>En extra närstående för din mamma eller pappa</h1>
+      <p class="lead">Vi hälsar på, fikar, följer med på promenader och ärenden och hjälper till med mobilen. Samma person varje gång, och efter varje besök får du som anhörig en kort rapport.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="/kontakt/">Boka ett första möte</a><a class="btn btn-outline" href={`tel:${site.phoneIntl}`}>Ring oss</a></div>
+      <ul class="checks"><li>Hälften av priset med RUT</li><li>Utdrag ur belastningsregistret</li><li>Samma person varje gång</li></ul>
+    </div>
+    <div class="media"><img src="/img/promenad-havet.webp" alt="Medarbetare på promenad med en äldre kvinna i rullstol längs havet" width="1448" height="1086" fetchpriority="high" /></div>
+  </div>
+
+  <section id="for-vem" class="section">
+    <div class="wrap stack">
+      <h2>För vem?</h2>
+      <p class="lead">Kulla Omtanke är ett komplement till hemtjänst och äldreboende, inte en ersättning. Vi ger det som sällan ryms i ett schema: tid, sällskap och någon som känner en.</p>
+      <div class="grid">
+        <div class="card light"><h3>När hemtjänsten inte räcker till</h3><p class="muted">Hemtjänsten hinner med det nödvändiga, men sällan mer. Vi kommer för promenaden, samtalet och ärendet som annars får vänta.</p><a class="more" href="/komplement-till-hemtjansten/">Komplement till hemtjänsten</a></div>
+        <div class="card light"><h3>För dig som bor på äldreboende</h3><p class="muted">Personalen har många att ta hand om. Hos oss får man en egen stund med en person som bara är där för en, inne eller ute.</p></div>
+        <div class="card light"><h3>För dig som klarar dig själv</h3><p class="muted">Du behöver varken hemtjänst eller boende, men vill ha hjälp med lite praktiskt och någon att prata med. Då blir veckans besök något att se fram emot.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tjanster" class="section white">
+    <div class="wrap stack">
+      <h2>Så kan vi hjälpa till</h2>
+      <p class="lead">Ni väljer själva vad besöket ska innehålla. Ofta blir det en blandning av sällskap och något praktiskt.</p>
+      <ServiceCards />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="a stack">
+        <p class="kicker" style="color: var(--terra)">För dig som bor långt bort</p>
+        <h2>Du vet hur mamma mår, även när du inte kan vara där</h2>
+        <p class="muted">Många som hör av sig är vuxna barn som oroar sig för att pappa sitter ensam för mycket. Efter varje besök skickar vi ett sms eller mejl: vad vi gjorde, hur han verkade må och om något behöver följas upp.</p>
+        <p><a href="/for-anhoriga/"><strong>Läs mer för anhöriga</strong></a></p>
+      </div>
+      <div class="b report">
+        <p class="label">Exempel på besöksrapport</p>
+        <div class="bubble">Hej! Idag var jag hos Margit 14.00 till 16.00. Vi gick en sväng till hamnen och köpte bröd på vägen hem. Hon berättade om barnbarnen och var på gott humör. Jag hjälpte henne att svara på videosamtal i mobilen. Medicinen från apoteket är hämtad. Vi ses på torsdag.</div>
+        <p class="muted" style="font-size: 16px">Rapporten ingår i alla paket.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="wrap stack">
+      <h2>Så kommer ni igång</h2>
+      <ol class="steps grid">
+        <li class="card"><span class="num">1</span><h3>Hör av er</h3><p class="muted">Ring, mejla eller skicka en förfrågan och berätta vad som behövs.</p></li>
+        <li class="card"><span class="num">2</span><h3>Vi träffas</h3><p class="muted">Ett kostnadsfritt första möte på en halvtimme, hemma hos den det gäller.</p></li>
+        <li class="card"><span class="num">3</span><h3>Fasta tider</h3><p class="muted">Vi bestämmer dag och tid varje eller varannan vecka, med samma person.</p></li>
+        <li class="card"><span class="num">4</span><h3>Rapport efter besöket</h3><p class="muted">Anhöriga får ett sms eller mejl efter varje besök. Fakturan kommer en gång i månaden med RUT avdraget.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="priser" class="section dark">
+    <div class="wrap stack">
+      <h2>Enkla priser, löpande varje vecka</h2>
+      <p>Alla priser är inklusive moms och gäller efter RUT-avdrag. Minst två timmar per besök, ingen bindningstid och en veckas uppsägning.</p>
+      <div class="grid">
+        {plans.map((p) => (<div class="card"><h3>{p.name}</h3><p>{p.time}</p><p class="price">{p.price}</p><p style="font-size: 16px">{p.before} · inkl. moms</p><p>{p.text}</p></div>))}
+      </div>
+      <p>Timpris {site.hourly} kr inkl. moms efter RUT ({site.hourlyBefore} kr före). <a href="/priser-och-rut/" style="color: #fff"><strong>Så fungerar priser och RUT</strong></a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap stack">
+      <h2>Här finns vi</h2>
+      <p class="muted">Vi hjälper till i Höganäs kommun och Ängelholm.</p>
+      <ul class="places">{places.map((p) => <li>{p.page ? <a href={`/${p.slug}/`}>{p.name}</a> : <a href="/hoganas/">{p.name}</a>}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="wrap stack"><Faq items={faqGeneral} /></div>
+  </section>
+
+  <section id="kontakt" class="section">
+    <div class="wrap split">
+      <div class="b stack" style="flex: 1 1 320px">
+        <h2>Kontakta oss</h2>
+        <p class="muted">Första träffen är kostnadsfri och tar en halvtimme. Vi pratar om vad som behövs och om kemin stämmer.</p>
+        <p><strong>Ring <a href={`tel:${site.phoneIntl}`}>{site.phone}</a></strong></p>
+        <p>eller mejla <a href={`mailto:${site.email}`}>{site.email}</a></p>
+      </div>
+      <div class="a" style="flex: 999 1 520px"><ContactForm /></div>
+    </div>
+  </section>
+</Base>

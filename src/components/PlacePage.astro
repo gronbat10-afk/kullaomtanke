@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import Faq from './Faq.astro';
+import ServiceCards from './ServiceCards.astro';
+import { placePages, site, faqGeneral } from '../data/site.js';
+const { key } = Astro.props;
+const pl = placePages[key];
+const url = `https://kullaomtanke.se/${key}/`;
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'Service', name: `Sällskap och vardagshjälp för äldre i ${pl.name}`, url,
+    provider: { '@id': 'https://kullaomtanke.se/#foretag' }, areaServed: pl.areas.map((a) => ({ '@type': 'Place', name: a })) },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://kullaomtanke.se/' },
+    { '@type': 'ListItem', position: 2, name: pl.name, item: url } ] },
+];
+---
+<Base title={pl.title} description={pl.description} schema={schema}>
+  <div class="wrap page-hero stack">
+    <p class="breadcrumbs"><a href="/">Start</a> / {pl.name}</p>
+    <h1>{pl.h1}</h1>
+    <p class="lead">{pl.lead}</p>
+    <div class="btn-row"><a class="btn btn-primary" href="/kontakt/">Boka ett första möte</a><a class="btn btn-outline" href={`tel:${site.phoneIntl}`}>Ring {site.phone}</a></div>
+  </div>
+  <section class="section white">
+    <div class="wrap prose">
+      <h2>Lokalt i {pl.name}</h2>
+      {pl.p.map((t) => <p>{t}</p>)}
+      <h2>Områden vi besöker</h2>
+      <p>{pl.areas.join(', ')}. Bor ni strax utanför? Hör av er, så löser vi det.</p>
+      <h2>Pris</h2>
+      <p>{site.hourly} kr i timmen inklusive moms efter RUT-avdrag, ingen bindningstid. <a href="/priser-och-rut/">Se paket och priser</a>.</p>
+    </div>
+  </section>
+  <section class="section"><div class="wrap stack"><h2>Det här hjälper vi till med i {pl.name}</h2><ServiceCards /></div></section>
+  <section class="section white"><div class="wrap stack"><Faq items={faqGeneral} /></div></section>
+</Base>

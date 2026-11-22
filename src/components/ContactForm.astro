@@ -1,0 +1,14 @@
+---
+import { places } from '../data/site.js';
+---
+<form class="form" name="kontakt" method="POST" action="/tack/" data-netlify="true" netlify-honeypot="falt">
+  <input type="hidden" name="form-name" value="kontakt" />
+  <p hidden><label>Lämna tomt <input name="falt" /></label></p>
+  <label>Ditt namn<input type="text" name="namn" autocomplete="name" required /></label>
+  <label>Telefon<input type="tel" name="telefon" autocomplete="tel" required /></label>
+  <label>Hjälpen gäller<select name="vem"><option>Mig själv</option><option>Min mamma eller pappa</option><option>Någon annan närstående</option></select></label>
+  <label>Ort<select name="ort">{places.map((p) => <option>{p.name}</option>)}<option>Annan ort</option></select></label>
+  <label class="full">Vad behövs hjälp med?<textarea name="meddelande" rows="4"></textarea></label>
+  <div class="full"><button class="btn btn-primary" type="submit">Skicka förfrågan</button></div>
+  <p class="full note">Vi ringer upp inom en arbetsdag. Uppgifterna används bara för att kontakta dig om din förfrågan. Läs vår <a href="/integritetspolicy/">integritetspolicy</a>.</p>
+</form>

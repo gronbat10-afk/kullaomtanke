@@ -1,0 +1,16 @@
+---
+import { services } from '../data/site.js';
+const { exclude } = Astro.props;
+const blurbs = {
+  'sallskap-for-aldre': 'Fika, samtal och någon som har tid att lyssna.',
+  'promenad-och-ledsagning': 'En promenad i egen takt, även med rullstol eller rollator.',
+  'arenden-och-handling': 'Affären, apoteket, banken och paketet som ska hämtas.',
+  'teknikhjalp-for-seniorer': 'Mobil, surfplatta, videosamtal och tv, i lugn takt.',
+  'tvatt-och-hemhjalp': 'Tvätt, sängkläder och enklare städning i hemmet.',
+};
+---
+<div class="grid grid-services">
+  {services.filter((s) => s.slug !== exclude).map((s) => (
+    <div class="card light"><h3>{s.short}</h3><p class="muted">{blurbs[s.slug]}</p><a class="more" href={`/${s.slug}/`}>Läs mer om {s.short.toLowerCase()}</a></div>
+  ))}
+</div>

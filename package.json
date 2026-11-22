@@ -1,0 +1,13 @@
+{
+  "name": "kullaomtanke",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "dev": "astro dev", "build": "astro build", "preview": "astro preview" },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "@astrojs/sitemap": "^3.2.0",
+    "@fontsource-variable/figtree": "^5.1.0",
+    "@fontsource-variable/bricolage-grotesque": "^5.1.0"
+  }
+}

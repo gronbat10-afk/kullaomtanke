@@ -1,0 +1,92 @@
+---
+import '../styles/global.css';
+import { site, nav, services, places } from '../data/site.js';
+interface Props { title: string; description: string; schema?: object[]; cta?: boolean; }
+const { title, description, schema = [], cta = true } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const business = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://kullaomtanke.se/#foretag',
+  name: site.name,
+  slogan: site.slogan,
+  url: 'https://kullaomtanke.se/',
+  telephone: site.phoneIntl,
+  email: site.email,
+  logo: 'https://kullaomtanke.se/img/kulla-omtanke-logo-640.png',
+  image: 'https://kullaomtanke.se/img/promenad-havet.webp',
+  description: 'Sällskap och vardagshjälp för äldre i Höganäs kommun och Ängelholm. Samma person varje gång och rapport till anhöriga. RUT-avdrag.',
+  priceRange: '290 kr/tim efter RUT',
+  areaServed: places.map((p) => ({ '@type': 'City', name: p.name })),
+};
+---
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content="https://kullaomtanke.se/img/promenad-havet.webp" />
+  <script type="application/ld+json" set:html={JSON.stringify(business)} />
+  {schema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="Kulla Omtanke, till startsidan"><img src="/img/kulla-omtanke-logo-640.png" alt="Kulla Omtanke" width="149" height="72" /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="huvudmeny">Meny</button>
+      <nav class="nav" id="huvudmeny" aria-label="Huvudmeny">
+        {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+        <a class="call" href={`tel:${site.phoneIntl}`}>Ring oss</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <slot />
+  </main>
+  {cta && <section class="cta-band">
+    <div class="wrap">
+      <h2>Vill ni veta mer? Första mötet är kostnadsfritt.</h2>
+      <div class="btn-row"><a class="btn" href="/kontakt/">Boka ett första möte</a><a class="btn" href={`tel:${site.phoneIntl}`}>Ring {site.phone}</a></div>
+    </div>
+  </section>}
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="col">
+        <span class="logo-box"><img src="/img/kulla-omtanke-logo-640.png" alt="Kulla Omtanke" width="124" height="60" loading="lazy" /></span>
+        <span>{site.slogan} i Höganäs kommun och Ängelholm.</span>
+      </div>
+      <div class="col">
+        <strong>Tjänster</strong>
+        {services.map((s) => <a href={`/${s.slug}/`}>{s.short}</a>)}
+      </div>
+      <div class="col">
+        <strong>Här finns vi</strong>
+        {places.filter((p) => p.page).map((p) => <a href={`/${p.slug}/`}>{p.name}</a>)}
+        <a href="/for-anhoriga/">För anhöriga</a>
+        <a href="/priser-och-rut/">Priser och RUT</a>
+      </div>
+      <div class="col">
+        <strong>Kontakt</strong>
+        <a href={`tel:${site.phoneIntl}`}>{site.phone}</a>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+        <span>Godkänd för F-skatt</span>
+        <a href="/integritetspolicy/">Integritetspolicy</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const b = document.querySelector('.menu-toggle');
+    const n = document.getElementById('huvudmeny');
+    b?.addEventListener('click', () => { const o = n.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); });
+  </script>
+</body>
+</html>
