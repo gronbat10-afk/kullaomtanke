@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import ServiceCards from '../../components/ServiceCards.astro';
+import { guides } from '../../data/site.js';
+export function getStaticPaths() { return guides.map((g) => ({ params: { slug: g.slug }, props: { g } })); }
+const { g } = Astro.props;
+const url = `https://kullaomtanke.se/guider/${g.slug}/`;
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'Article', headline: g.title, description: g.description, inLanguage: 'sv', mainEntityOfPage: url,
+    author: { '@type': 'Organization', name: 'Kulla Omtanke' }, publisher: { '@id': 'https://kullaomtanke.se/#foretag' }, datePublished: '2026-11-22' },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://kullaomtanke.se/' },
+    { '@type': 'ListItem', position: 2, name: 'Guider', item: 'https://kullaomtanke.se/guider/' },
+    { '@type': 'ListItem', position: 3, name: g.short, item: url } ] },
+];
+---
+<Base title={`${g.title} | Kulla Omtanke`} description={g.description} schema={schema}>
+  <article class="wrap page-hero">
+    <p class="breadcrumbs"><a href="/">Start</a> / <a href="/guider/">Guider</a> / {g.short}</p>
+    <div class="prose">
+      <h1>{g.title}</h1>
+      <p class="lead">{g.intro}</p>
+      {g.sections.map((sec) => (
+        <>
+          <h2>{sec.h}</h2>
+          {sec.p && sec.p.map((t) => <p>{t}</p>)}
+          {sec.list && <ul>{sec.list.map((li) => <li>{li}</li>)}</ul>}
+        </>
+      ))}
+      {g.source && <p class="muted">Källa: <a href={g.source.url} rel="noopener">{g.source.name}</a></p>}
+    </div>
+  </article>
+  <section class="section white"><div class="wrap stack"><h2>Så kan Kulla Omtanke hjälpa till</h2><ServiceCards /></div></section>
+</Base>

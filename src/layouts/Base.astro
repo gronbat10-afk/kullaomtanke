@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { site, nav, services, places } from '../data/site.js';
+import { site, nav, services, extraServices, places } from '../data/site.js';
 interface Props { title: string; description: string; schema?: object[]; cta?: boolean; noindex?: boolean; }
 const { title, description, schema = [], cta = true, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
@@ -79,7 +79,8 @@ const business = {
       </div>
       <div class="col">
         <strong>Tjänster</strong>
-        {services.map((s) => <a href={`/${s.slug}/`}>{s.short}</a>)}
+        {[...services, ...extraServices].map((s) => <a href={`/${s.slug}/`}>{s.short}</a>)}
+        <a href="/guider/">Guider för anhöriga</a>
       </div>
       <div class="col">
         <strong>Här finns vi</strong>

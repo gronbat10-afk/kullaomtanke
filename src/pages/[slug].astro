@@ -2,9 +2,9 @@
 import Base from '../layouts/Base.astro';
 import Faq from '../components/Faq.astro';
 import ServiceCards from '../components/ServiceCards.astro';
-import { services, site } from '../data/site.js';
+import { services, extraServices, site } from '../data/site.js';
 export function getStaticPaths() {
-  return services.map((s) => ({ params: { slug: s.slug }, props: { s } }));
+  return [...services, ...extraServices].map((s) => ({ params: { slug: s.slug }, props: { s } }));
 }
 const { s } = Astro.props;
 const url = `https://kullaomtanke.se/${s.slug}/`;

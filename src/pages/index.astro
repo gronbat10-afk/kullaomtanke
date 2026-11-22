@@ -84,7 +84,7 @@ const faqSchema = {
     <div class="wrap stack">
       <h2>Här finns vi</h2>
       <p class="muted">Vi hjälper till i Höganäs kommun och Ängelholm.</p>
-      <ul class="places">{places.map((p) => <li>{p.page ? <a href={`/${p.slug}/`}>{p.name}</a> : <a href="/hoganas/">{p.name}</a>}</li>)}</ul>
+      <ul class="places">{places.map((p) => <li><a href={`/${p.slug}/`}>{p.name}</a></li>)}</ul>
     </div>
   </section>
 

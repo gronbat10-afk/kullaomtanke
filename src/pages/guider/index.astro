@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import { guides } from '../../data/site.js';
+---
+<Base title="Guider för anhöriga och äldre | Kulla Omtanke" description="Guider om RUT-avdrag för äldre, ensamhet och tecken på att en förälder behöver mer hjälp. Skrivna för anhöriga i Höganäs och Ängelholm.">
+  <div class="wrap page-hero stack">
+    <p class="breadcrumbs"><a href="/">Start</a> / Guider</p>
+    <h1>Guider för anhöriga</h1>
+    <p class="lead">Praktiska guider för dig som vill hjälpa en äldre förälder, partner eller vän.</p>
+  </div>
+  <section class="section white">
+    <div class="wrap grid">
+      {guides.map((g) => (<div class="card light"><h2 style="font-size: 24px">{g.short}</h2><p class="muted">{g.description}</p><a class="more" href={`/guider/${g.slug}/`}>Läs guiden</a></div>))}
+    </div>
+  </section>
+</Base>
