@@ -184,3 +184,12 @@ p { margin: 0; }
 @media (min-width: 1600px) {
   .wrap { max-width: 1320px; }
 }
+
+/* tjänstekort på dator: tre överst, två bredare under */
+@media (min-width: 1024px) {
+  .grid-services { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; }
+  .grid-services > * { grid-column: span 2; }
+  .grid-services > :nth-last-child(2):nth-child(3n+1),
+  .grid-services > :last-child:nth-child(3n+2) { grid-column: span 3; }
+  .grid-services .card { padding: 30px 32px; }
+}
