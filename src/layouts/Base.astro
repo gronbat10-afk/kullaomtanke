@@ -57,7 +57,7 @@ const business = {
       <a class="logo" href="/" aria-label="Kulla Omtanke, till startsidan"><img src="/img/kulla-omtanke-logo-640.png" alt="Kulla Omtanke" width="149" height="72" /></a>
       <div class="header-actions">
         <a class="call-mobile" href={`tel:${site.phoneIntl}`}>Ring</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="huvudmeny">Meny</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="huvudmeny" aria-label="Öppna menyn"><span></span><span></span><span></span></button>
       </div>
       <nav class="nav" id="huvudmeny" aria-label="Huvudmeny">
         {nav.map((n) => <a href={n.href}>{n.label}</a>)}
@@ -103,7 +103,7 @@ const business = {
   <script>
     const b = document.querySelector('.menu-toggle');
     const n = document.getElementById('huvudmeny');
-    b?.addEventListener('click', () => { const o = n.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); });
+    b?.addEventListener('click', () => { const o = n.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); b.setAttribute('aria-label', o ? 'Stäng menyn' : 'Öppna menyn'); });
   </script>
 </body>
 </html>
