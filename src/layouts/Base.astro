@@ -17,7 +17,7 @@ const business = {
   address: { '@type': 'PostalAddress', addressLocality: 'Höganäs', addressRegion: 'Skåne län', addressCountry: 'SE' },
   knowsLanguage: 'sv',
   image: 'https://kullaomtanke.se/img/promenad-havet.webp',
-  description: 'Sällskap och vardagshjälp för äldre i Höganäs kommun och Ängelholm. Samma person varje gång och rapport till anhöriga. RUT-avdrag.',
+  description: 'Sällskap och vardagshjälp för äldre i Höganäs kommun med omnejd. Samma person varje gång och rapport till anhöriga. RUT-avdrag.',
   hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Tjänster', itemListElement: services.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.short, url: `https://kullaomtanke.se/${s.slug}/` } })) },
   priceRange: '290 kr/tim efter RUT',
   areaServed: places.map((p) => ({ '@type': 'City', name: p.name })),
@@ -77,7 +77,7 @@ const business = {
     <div class="wrap">
       <div class="col">
         <span class="logo-box"><img src="/img/kulla-omtanke-logo-640.png" alt="Kulla Omtanke" width="124" height="60" loading="lazy" /></span>
-        <span>{site.slogan} i Höganäs kommun och Ängelholm.</span>
+        <span>{site.slogan} i Höganäs kommun med omnejd.</span>
       </div>
       <div class="col">
         <strong>Tjänster</strong>

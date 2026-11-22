@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
 import { site } from '../data/site.js';
 ---
-<Base title="Kontakta Kulla Omtanke | Boka ett första möte" description="Ring 070-965 57 27 eller skicka en förfrågan. Första mötet är kostnadsfritt. Sällskap och vardagshjälp för äldre i Höganäs kommun och Ängelholm." cta={false}>
+<Base title="Kontakta Kulla Omtanke | Boka ett första möte" description="Ring 070-965 57 27 eller skicka en förfrågan. Första mötet är kostnadsfritt. Sällskap och vardagshjälp för äldre i Höganäs kommun med omnejd." cta={false}>
   <div class="wrap page-hero">
     <p class="breadcrumbs"><a href="/">Start</a> / Kontakt</p>
     <div class="split">
@@ -12,7 +12,7 @@ import { site } from '../data/site.js';
         <p class="lead">Första mötet är kostnadsfritt och tar en halvtimme. Vi kommer hem till er, pratar om vad som behövs och ser om det känns rätt.</p>
         <p><strong>Telefon: <a href={`tel:${site.phoneIntl}`}>{site.phone}</a></strong></p>
         <p><strong>E-post: <a href={`mailto:${site.email}`}>{site.email}</a></strong></p>
-        <p class="muted">Vi hjälper till i Höganäs, Viken, Jonstorp, Nyhamnsläge, Mölle, Arild och Ängelholm.</p>
+        <p class="muted">Vi hjälper till i Höganäs kommun med omnejd: Höganäs, Viken, Jonstorp, Nyhamnsläge, Mölle, Arild och Lerberget.</p>
       </div>
       <div class="a" style="flex: 999 1 520px"><ContactForm /></div>
     </div>

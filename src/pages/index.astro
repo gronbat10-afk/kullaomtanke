@@ -9,10 +9,10 @@ const faqSchema = {
   mainEntity: faqGeneral.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 ---
-<Base title="Kulla Omtanke | Sällskap och vardagshjälp för äldre i Höganäs och Ängelholm" description="En extra närstående för din förälder. Sällskap, promenader och ärenden för äldre i Höganäs kommun och Ängelholm. 290 kr/tim efter RUT." schema={[faqSchema]} cta={false}>
+<Base title="Kulla Omtanke | Sällskap och vardagshjälp för äldre i Höganäs med omnejd" description="En extra närstående för din förälder. Sällskap, promenader och ärenden för äldre i Höganäs kommun med omnejd. 290 kr/tim efter RUT." schema={[faqSchema]} cta={false}>
   <div class="wrap hero">
     <div class="text">
-      <p class="kicker">En extra närstående i Höganäs kommun och Ängelholm</p>
+      <p class="kicker">En extra närstående i Höganäs kommun med omnejd</p>
       <h1>Sällskap och vardagshjälp för äldre i Kullabygden</h1>
       <p class="lead">Vi hälsar på, fikar, följer med på promenader och ärenden och hjälper till med mobilen. Samma person varje gång, och efter varje besök får du som anhörig en kort rapport.</p>
       <div class="btn-row"><a class="btn btn-primary" href="/kontakt/">Boka ett första möte</a><a class="btn btn-outline" href={`tel:${site.phoneIntl}`}>Ring oss</a></div>
@@ -83,7 +83,7 @@ const faqSchema = {
   <section class="section">
     <div class="wrap stack">
       <h2>Här finns vi</h2>
-      <p class="muted">Vi hjälper till i Höganäs kommun och Ängelholm.</p>
+      <p class="muted">Vi hjälper till i Höganäs kommun med omnejd.</p>
       <ul class="places">{places.map((p) => <li><a href={`/${p.slug}/`}>{p.name}</a></li>)}</ul>
     </div>
   </section>

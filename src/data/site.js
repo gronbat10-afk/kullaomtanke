@@ -18,28 +18,22 @@ export const nav = [
 
 export const places = [
   { name: 'Höganäs', slug: 'hoganas', page: true },
-  { name: 'Ängelholm', slug: 'angelholm', page: true },
   { name: 'Viken', slug: 'viken', page: true },
   { name: 'Jonstorp', slug: 'jonstorp', page: true },
   { name: 'Nyhamnsläge', slug: 'nyhamnslage', page: true },
   { name: 'Mölle', slug: 'molle', page: true },
   { name: 'Arild', slug: 'arild', page: true },
-  { name: 'Munka-Ljungby', slug: 'munka-ljungby', page: true },
-  { name: 'Vejbystrand', slug: 'vejbystrand', page: true },
   { name: 'Lerberget', slug: 'lerberget', page: true },
-  { name: 'Skälderviken', slug: 'skalderviken', page: true },
-  { name: 'Strövelstorp', slug: 'strovelstorp', page: true },
-  { name: 'Hjärnarp', slug: 'hjarnarp', page: true },
 ];
 
 export const services = [
   {
     slug: 'sallskap-for-aldre',
     short: 'Sällskap för äldre',
-    title: 'Sällskap för äldre i Höganäs och Ängelholm | Kulla Omtanke',
-    description: 'Sällskap för äldre i hemmet: fika, samtal, kortspel och promenad med samma person varje vecka. Höganäs kommun och Ängelholm. 290 kr/tim efter RUT.',
+    title: 'Sällskap för äldre i Höganäs med omnejd | Kulla Omtanke',
+    description: 'Sällskap för äldre i hemmet: fika, samtal, kortspel och promenad med samma person varje vecka. Höganäs kommun med omnejd. 290 kr/tim efter RUT.',
     h1: 'Sällskap för äldre, med samma person varje vecka',
-    lead: 'Någon som kommer på bestämd tid, sätter på kaffet och har tid att lyssna. Vi erbjuder sällskap för äldre i Höganäs kommun och Ängelholm, som ett komplement till hemtjänst och äldreboende.',
+    lead: 'Någon som kommer på bestämd tid, sätter på kaffet och har tid att lyssna. Vi erbjuder sällskap för äldre i Höganäs kommun med omnejd, som ett komplement till hemtjänst och äldreboende.',
     rut: 'Rent sällskap ger inte RUT-avdrag. Därför lägger vi nästan alltid in en promenad, ett ärende eller lite tvätt i besöket, så att den tiden ger avdrag.',
     sections: [
       { h: 'Varför sällskap gör skillnad', p: [
@@ -67,7 +61,7 @@ export const services = [
     slug: 'promenad-och-ledsagning',
     short: 'Promenad och ledsagning',
     title: 'Promenadsällskap och ledsagning för äldre | Kulla Omtanke',
-    description: 'Promenadsällskap och ledsagning för äldre i Höganäs, Viken och Ängelholm. Trygg promenad i egen takt, även med rullstol eller rollator. RUT-avdrag.',
+    description: 'Promenadsällskap och ledsagning för äldre i Höganäs, Viken och Jonstorp. Trygg promenad i egen takt, även med rullstol eller rollator. RUT-avdrag.',
     h1: 'Promenadsällskap och ledsagning i egen takt',
     lead: 'En promenad längs havet eller runt kvarteret blir både tryggare och roligare i sällskap. Vi följer med, i den takt som passar, med eller utan rollator och rullstol.',
     rut: 'Promenader och ledsagning ger RUT-avdrag, så du betalar 290 kr i timmen inklusive moms efter avdraget.',
@@ -95,7 +89,7 @@ export const services = [
     slug: 'arenden-och-handling',
     short: 'Ärenden och handling',
     title: 'Hjälp att handla och göra ärenden för äldre | Kulla Omtanke',
-    description: 'Vi följer med och handlar, hämtar på apoteket och gör ärenden på bank och post för äldre i Höganäs kommun och Ängelholm. RUT-avdrag, samma person varje gång.',
+    description: 'Vi följer med och handlar, hämtar på apoteket och gör ärenden på bank och post för äldre i Höganäs kommun med omnejd. RUT-avdrag, samma person varje gång.',
     h1: 'Hjälp att handla och göra ärenden',
     lead: 'Matbutiken, apoteket, paketet som ska hämtas. Vi följer med eller gör ärendet tillsammans med dig, så att vardagen fungerar utan att någon behöver stressa.',
     rut: 'Att följa med på ärenden ger RUT-avdrag. Själva varorna betalar du som vanligt.',
@@ -124,7 +118,7 @@ export const services = [
     slug: 'teknikhjalp-for-seniorer',
     short: 'Hjälp med mobil och tv',
     title: 'Enklare hjälp med mobil och tv för äldre | Kulla Omtanke',
-    description: 'Enklare hjälp med mobilen, tv:n och videosamtal med familjen, som en del av besöket. Höganäs kommun och Ängelholm. RUT-avdrag, 290 kr/tim efter avdrag.',
+    description: 'Enklare hjälp med mobilen, tv:n och videosamtal med familjen, som en del av besöket. Höganäs kommun med omnejd. RUT-avdrag, 290 kr/tim efter avdrag.',
     h1: 'Enklare hjälp med mobil, tv och videosamtal',
     lead: 'Ibland krånglar mobilen eller tv:n, eller så vill man ringa ett videosamtal till barnbarnen. Vi hjälper gärna till med det enkla, i lugn takt, som en del av besöket.',
     rut: 'Hjälp med teknik som utförs i hemmet ger RUT-avdrag, 290 kr i timmen inklusive moms efter avdraget.',
@@ -149,7 +143,7 @@ export const services = [
     slug: 'tvatt-och-hemhjalp',
     short: 'Tvätt och hemhjälp',
     title: 'Hemhjälp för äldre: tvätt och enklare städning | Kulla Omtanke',
-    description: 'Hemhjälp för äldre i Höganäs kommun och Ängelholm: tvätt, byta sängkläder och enklare städning, gärna kombinerat med sällskap. RUT-avdrag.',
+    description: 'Hemhjälp för äldre i Höganäs kommun med omnejd: tvätt, byta sängkläder och enklare städning, gärna kombinerat med sällskap. RUT-avdrag.',
     h1: 'Hemhjälp med tvätt och lite städning',
     lead: 'Tvättkorgen som växer och sängkläderna som borde bytas. Vi hjälper till med det praktiska i hemmet, och gör det gärna tillsammans med en fika eller en promenad.',
     rut: 'Tvätt och städning i hemmet ger RUT-avdrag, 290 kr i timmen inklusive moms efter avdraget.',
@@ -186,18 +180,6 @@ export const placePages = {
     ],
     areas: ['Höganäs', 'Viken', 'Jonstorp', 'Nyhamnsläge', 'Mölle', 'Arild', 'Lerberget', 'Ingelsträde'],
   },
-  angelholm: {
-    name: 'Ängelholm',
-    title: 'Hemhjälp och sällskap för äldre i Ängelholm | Kulla Omtanke',
-    description: 'Sällskap, promenader och ärenden för äldre i Ängelholm. Ett komplement till hemtjänsten, samma person varje gång. 290 kr/tim efter RUT-avdrag.',
-    h1: 'Sällskap och hemhjälp för äldre i Ängelholm',
-    lead: 'Vi hjälper äldre i Ängelholm med sällskap, promenader, ärenden och tvätt. Samma person kommer varje gång, och familjen får en rapport efter besöket.',
-    p: [
-      'En promenad längs Rönne å, en fika på stan eller hjälp att handla på vägen hem. Vi anpassar besöken efter vad som passar just er.',
-      'Många av våra kunder har hemtjänst som sköter det nödvändiga. Vi står för tiden däremellan, med sällskap och det där lilla extra som gör veckan lättare.',
-    ],
-    areas: ['Ängelholm centrum', 'Munka-Ljungby', 'Strövelstorp', 'Vejbystrand', 'Skälderviken'],
-  },
 };
 
 export const faqGeneral = [
@@ -218,7 +200,7 @@ export const extraServices = [
     slug: 'folje-till-lakarbesok',
     short: 'Följe till läkarbesök',
     title: 'Följe till vårdcentral och läkarbesök för äldre | Kulla Omtanke',
-    description: 'Vi följer med till vårdcentralen, sjukhuset, tandläkaren eller optikern i Höganäs och Ängelholm. Stöd före, under och efter besöket. RUT-avdrag.',
+    description: 'Vi följer med till vårdcentralen, sjukhuset, tandläkaren eller optikern i Höganäs med omnejd. Stöd före, under och efter besöket. RUT-avdrag.',
     h1: 'Följe till vårdcentral och läkarbesök',
     lead: 'Ett läkarbesök kan kännas stort när man är osäker på vägen, på bussen eller på vad man ska fråga. Vi följer med hela vägen, från dörren hemma till dörren hemma igen.',
     rut: 'Att följa med till vårdcentral och läkare ger RUT-avdrag, 290 kr i timmen inklusive moms efter avdraget.',
@@ -231,7 +213,7 @@ export const extraServices = [
         'Berättar för de anhöriga hur besöket gick, om ni vill',
       ] },
       { h: 'Vart vi följer med', p: [
-        'Vårdcentraler i Höganäs kommun och Ängelholm, Ängelholms sjukhus, Helsingborgs lasarett vid behov, tandläkare, optiker och fotvård.',
+        'Vårdcentraler i Höganäs kommun, Ängelholms sjukhus, Helsingborgs lasarett vid behov, tandläkare, optiker och fotvård.',
       ] },
       { h: 'Vi är ett stöd, inte vårdpersonal', p: [
         'Vi är med som sällskap och stöd. Vi ger inga medicinska råd och fattar inga beslut, men vi ser till att inget faller mellan stolarna.',
@@ -247,7 +229,7 @@ export const extraServices = [
     slug: 'sallskap-pa-aldreboende',
     short: 'Sällskap på äldreboende',
     title: 'Sällskap och besök på äldreboende | Kulla Omtanke',
-    description: 'Egen tid med en fast person för den som bor på äldreboende i Höganäs eller Ängelholm. Samtal, promenad, fika och ärenden. Rapport till anhöriga.',
+    description: 'Egen tid med en fast person för den som bor på äldreboende i Höganäs med omnejd. Samtal, promenad, fika och ärenden. Rapport till anhöriga.',
     h1: 'Sällskap för dig som bor på äldreboende',
     lead: 'Personalen på boendet har många att ta hand om. Med Kulla Omtanke får din förälder en egen stund med en person som bara är där för henne eller honom.',
     rut: 'Promenader och ärenden ger RUT-avdrag även på äldreboende, eftersom boendet räknas som hemmet. Rent sällskap ger inte avdrag.',
@@ -272,7 +254,7 @@ export const extraServices = [
   {
     slug: 'avlastning-for-anhoriga',
     short: 'Avlastning för anhöriga',
-    title: 'Avlastning för anhöriga till äldre i Höganäs och Ängelholm | Kulla Omtanke',
+    title: 'Avlastning för anhöriga till äldre i Höganäs med omnejd | Kulla Omtanke',
     description: 'Tar du hand om en äldre förälder eller partner? Vi avlastar med sällskap, promenader och ärenden, så att du får tid för dig själv. RUT-avdrag.',
     h1: 'Avlastning för dig som anhörig',
     lead: 'Att ta hand om en förälder eller partner är ofta ett heltidsjobb vid sidan av allt annat. Vi tar över några timmar i veckan, så att du kan andas, jobba eller göra något för dig själv.',
@@ -301,7 +283,7 @@ export const extraServices = [
     slug: 'hjalp-efter-sjukhusvistelse',
     short: 'Hjälp efter sjukhusvistelse',
     title: 'Hjälp hemma efter sjukhusvistelse för äldre | Kulla Omtanke',
-    description: 'Hemma igen efter sjukhuset? Vi hjälper till med handling, apotek, tvätt och sällskap de första veckorna i Höganäs och Ängelholm. RUT-avdrag.',
+    description: 'Hemma igen efter sjukhuset? Vi hjälper till med handling, apotek, tvätt och sällskap de första veckorna i Höganäs med omnejd. RUT-avdrag.',
     h1: 'Hjälp hemma efter en sjukhusvistelse',
     lead: 'De första veckorna hemma efter sjukhuset är ofta de tuffaste. Orken är inte tillbaka, kylskåpet är tomt och det finns recept att hämta ut. Vi finns där under tiden det tar att komma på fötter igen.',
     rut: 'Ärenden, apoteksbesök, tvätt och promenader ger RUT-avdrag, 290 kr i timmen inklusive moms efter avdraget.',
@@ -338,7 +320,7 @@ export const extraServices = [
     sections: [
       { h: 'Exempel på utflykter', list: [
         'En fika vid havet i Mölle, Arild eller Höganäs',
-        'En promenad längs Rönne å i Ängelholm',
+        'En promenad längs strandpromenaden i Höganäs',
         'Ett besök hos en vän eller på en anhörigs grav',
         'Handla kläder eller en present på stan',
         'Komma till en träff, kyrkan eller en förening',
@@ -360,16 +342,11 @@ export const extraServices = [
 
 export const morePlaces = {
   viken: { name: 'Viken', kommun: 'Höganäs kommun', title: 'Sällskap och hemhjälp för äldre i Viken | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Viken. Samma person varje gång och rapport till anhöriga. 290 kr/tim efter RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Viken', lead: 'Vi hjälper äldre i Viken med sällskap, promenader, ärenden och tvätt, som ett komplement till hemtjänsten.', p: ['En promenad genom gamla fiskeläget eller ner till hamnen, en fika och ett ärende på vägen hem. Vi tar det i den takt som passar.', 'Bor barnen långt bort får de en kort rapport efter varje besök, så att de vet hur det går.'] },
-  jonstorp: { name: 'Jonstorp', kommun: 'Höganäs kommun', title: 'Sällskap och hemhjälp för äldre i Jonstorp | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Jonstorp och Farhult. Samma person varje gång. 290 kr/tim efter RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Jonstorp', lead: 'Vi besöker äldre i Jonstorp och Farhult med sällskap, promenader och hjälp med ärenden.', p: ['På landet blir avstånden längre. Vår bil rymmer både rullstol och rollator, så ärenden i Höganäs eller Ängelholm blir enkla att göra tillsammans.', 'Samma person kommer varje gång, och de anhöriga får en kort rapport efter besöket.'] },
+  jonstorp: { name: 'Jonstorp', kommun: 'Höganäs kommun', title: 'Sällskap och hemhjälp för äldre i Jonstorp | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Jonstorp och Farhult. Samma person varje gång. 290 kr/tim efter RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Jonstorp', lead: 'Vi besöker äldre i Jonstorp och Farhult med sällskap, promenader och hjälp med ärenden.', p: ['På landet blir avstånden längre. Vår bil rymmer både rullstol och rollator, så ärenden i Höganäs blir enkla att göra tillsammans.', 'Samma person kommer varje gång, och de anhöriga får en kort rapport efter besöket.'] },
   nyhamnslage: { name: 'Nyhamnsläge', kommun: 'Höganäs kommun', title: 'Sällskap och hemhjälp för äldre i Nyhamnsläge | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Nyhamnsläge. Samma person varje gång och rapport till anhöriga. RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Nyhamnsläge', lead: 'Vi hjälper äldre i Nyhamnsläge med sällskap, promenader, ärenden och lite hjälp hemma.', p: ['En tur ner till hamnen, en fika och lite handling på vägen. Små saker som gör veckan lättare.', 'Vi är ett komplement till hemtjänsten och kommer på fasta tider, med samma person varje gång.'] },
   molle: { name: 'Mölle', kommun: 'Höganäs kommun', title: 'Sällskap och hemhjälp för äldre i Mölle | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Mölle på Kullahalvön. Samma person varje gång. 290 kr/tim efter RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Mölle', lead: 'Längst ut på Kullahalvön kan vardagen bli ensam, särskilt på vintern. Vi kommer till Mölle med sällskap, promenader och hjälp med ärenden.', p: ['Vi följer med ner till hamnen, tar bilen till affären eller vårdcentralen i Höganäs och fikar hemma.', 'Familjen får en kort rapport efter varje besök.'] },
   arild: { name: 'Arild', kommun: 'Höganäs kommun', title: 'Sällskap och hemhjälp för äldre i Arild | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Arild. Samma person varje gång och rapport till anhöriga. RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Arild', lead: 'Vi hjälper äldre i Arild med sällskap, promenader och ärenden, så att det går att bo kvar hemma i fiskeläget.', p: ['En promenad i fiskeläget, en fika och ett ärende i Höganäs. Bilen har plats för rullstol och rollator.', 'Samma person kommer varje gång, och de anhöriga får veta hur det gick.'] },
-  'munka-ljungby': { name: 'Munka-Ljungby', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Munka-Ljungby | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Munka-Ljungby. Samma person varje gång. 290 kr/tim efter RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Munka-Ljungby', lead: 'Vi besöker äldre i Munka-Ljungby med sällskap, promenader och hjälp med ärenden, som ett komplement till hemtjänsten.', p: ['Ärenden i Ängelholm blir enkla när vi tar bilen tillsammans. Annars blir det en promenad i närområdet och en fika hemma.', 'De anhöriga får en kort rapport efter varje besök.'] },
-  vejbystrand: { name: 'Vejbystrand', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Vejbystrand | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Vejbystrand. Samma person varje gång och rapport till anhöriga. RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Vejbystrand', lead: 'Vi hjälper äldre i Vejbystrand med sällskap, promenader vid havet och ärenden.', p: ['En promenad längs stranden, handling i Ängelholm och en fika hemma. Vi anpassar besöken efter vad som passar.', 'Samma person kommer varje gång, och familjen får en rapport efteråt.'] },
   lerberget: { name: 'Lerberget', kommun: 'Höganäs kommun', title: 'Sällskap och hemhjälp för äldre i Lerberget | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Lerberget och Ingelsträde. Samma person varje gång och rapport till anhöriga. RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Lerberget', lead: 'Vi hjälper äldre i Lerberget och Ingelsträde med sällskap, promenader och ärenden, som ett komplement till hemtjänsten.', p: ['En promenad ner mot hamnen, ett ärende i Höganäs och en kopp kaffe hemma efteråt. Vi tar det i den takt som passar.', 'Det är samma person som kommer varje gång. Bor barnen på annat håll får de en kort rapport efter varje besök.'] },
-  skalderviken: { name: 'Skälderviken', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Skälderviken | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Skälderviken. Samma person varje gång och rapport till anhöriga. 290 kr/tim efter RUT.', h1: 'Sällskap och vardagshjälp för äldre i Skälderviken', lead: 'Vi besöker äldre i Skälderviken med sällskap, promenader och hjälp med ärenden i Ängelholm.', p: ['En promenad längs viken, handling på vägen hem och en fika. Bilen rymmer både rullstol och rollator, så längre ärenden blir enkla.', 'Familjen får en kort rapport efter varje besök, så att alla vet hur veckan har varit.'] },
-  strovelstorp: { name: 'Strövelstorp', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Strövelstorp | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Strövelstorp. Ett komplement till hemtjänsten med samma person varje gång. RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Strövelstorp', lead: 'Vi hjälper äldre i Strövelstorp med sällskap, promenader och ärenden, så att vardagen blir lite lättare.', p: ['Mycket av det som behövs finns inne i Ängelholm. Vi tar bilen tillsammans till apoteket, affären eller vårdcentralen och fikar på vägen hem.', 'Vi kommer på fasta tider med samma person, och anhöriga får en rapport efter besöket.'] },
-  hjarnarp: { name: 'Hjärnarp', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Hjärnarp | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Hjärnarp. Samma person varje gång och rapport till anhöriga. 290 kr/tim efter RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Hjärnarp', lead: 'På landsbygden kan veckorna bli långa. Vi besöker äldre i Hjärnarp med sällskap, promenader och hjälp med ärenden.', p: ['Vi hjälper till med handling och ärenden i Ängelholm, en promenad i närheten och en pratstund hemma.', 'Samma person kommer varje gång. Anhöriga får en kort rapport efter varje besök.'] },
 };
 
 export const guides = [
@@ -408,15 +385,15 @@ export const guides = [
     sections: [
       { h: 'Om du bor nära', list: ['Gör besöken regelbundna, så att det finns något att se fram emot', 'Ta med på små utflykter, även korta', 'Hjälp till att komma till träffar, kyrkan eller en förening'] },
       { h: 'Om du bor långt bort', list: ['Ring på fasta tider', 'Lär ut videosamtal, så att barnbarnen syns', 'Skicka vykort och bilder, gärna på papper', 'Låt någon på plats göra fasta besök'] },
-      { h: 'Lokala mötesplatser', p: ['PRO, SPF Seniorerna, kyrkan och kommunens träffpunkter ordnar aktiviteter för äldre i både Höganäs och Ängelholm.'] },
+      { h: 'Lokala mötesplatser', p: ['PRO, SPF Seniorerna, kyrkan och kommunens träffpunkter ordnar aktiviteter för äldre i Höganäs kommun.'] },
     ],
   },
   {
     slug: 'sa-ansoker-du-om-hemtjanst',
-    title: 'Så ansöker du om hemtjänst i Höganäs och Ängelholm',
+    title: 'Så ansöker du om hemtjänst i Höganäs kommun',
     short: 'Så ansöker du om hemtjänst',
-    description: 'Steg för steg: så ansöker du eller din förälder om hemtjänst i Höganäs eller Ängelholms kommun, vad biståndshandläggaren gör och vad som händer sedan.',
-    intro: 'Hemtjänst är kommunens stöd till den som behöver hjälp för att klara vardagen hemma. Det är kommunen som avgör vem som har rätt till hemtjänst, och processen är i stort sett densamma i Höganäs och Ängelholm.',
+    description: 'Steg för steg: så ansöker du eller din förälder om hemtjänst i Höganäs kommun, vad biståndshandläggaren gör och vad som händer sedan.',
+    intro: 'Hemtjänst är kommunens stöd till den som behöver hjälp för att klara vardagen hemma. Det är kommunen som avgör vem som har rätt till hemtjänst, och här går vi igenom hur det går till i Höganäs kommun.',
     sections: [
       { h: '1. Kontakta kommunen', p: ['Ring kommunens växel eller kundtjänst och säg att du vill ansöka om hemtjänst. Det är den som ska få hjälpen som ansöker, men en anhörig kan hjälpa till med kontakten om föräldern vill det.'] },
       { h: '2. Samtal med en biståndshandläggare', p: ['En biståndshandläggare utreder behovet, ofta vid ett hembesök. Där pratar ni om vad som fungerar och vad som är svårt i vardagen, till exempel att handla, städa, laga mat eller sköta hygienen.'] },
@@ -427,15 +404,14 @@ export const guides = [
     ],
   },
   {
-    slug: 'anhorigstod-hoganas-och-angelholm',
-    title: 'Anhörigstöd i Höganäs och Ängelholm: det här finns att få',
-    short: 'Anhörigstöd i Höganäs och Ängelholm',
-    description: 'Hjälper du en äldre förälder eller partner? Kommunen ska enligt lag erbjuda stöd till anhöriga. Här är vad som finns i Höganäs och Ängelholm.',
+    slug: 'anhorigstod-i-hoganas-kommun',
+    title: 'Anhörigstöd i Höganäs kommun: det här finns att få',
+    short: 'Anhörigstöd i Höganäs kommun',
+    description: 'Hjälper du en äldre förälder eller partner? Kommunen ska enligt lag erbjuda stöd till anhöriga. Här är vad som finns i Höganäs kommun.',
     intro: 'Den som hjälper en äldre eller långvarigt sjuk närstående gör ofta ett stort jobb i det tysta. Kommunen ska enligt socialtjänstlagen erbjuda stöd till anhöriga, och du har rätt att be om det även om du inte bor ihop med den du hjälper.',
     sections: [
       { h: 'Vanliga former av anhörigstöd', list: ['Samtal med en anhörigkonsulent', 'Anhöriggrupper och träffar med andra i samma situation', 'Avlösning i hemmet, så att du kan gå ifrån en stund', 'Växelvård, där din närstående bor på ett boende under en period', 'Föreläsningar och information om till exempel demenssjukdom'] },
       { h: 'Höganäs kommun', p: ['Höganäs kommun har anhörigstöd med bland annat träffar, information och särskilt stöd för anhöriga till personer med demenssjukdom. Ring socialförvaltningen via kommunens växel, 042 33 71 00, och be att få prata med anhörigstödet.'] },
-      { h: 'Ängelholms kommun', p: ['I Ängelholm går du via kommunens kundtjänst, som kan koppla dig vidare till anhörigstödet och svara på frågor om äldreomsorg.'] },
       { h: 'Privat avlastning som komplement', p: ['Kommunens avlösning kräver ofta en ansökan. Behöver du avlastning snabbt, eller vill ha samma person varje gång, kan Kulla Omtanke ta över några timmar i veckan med sällskap, promenader och ärenden.'] },
     ],
     source: { name: '1177: Anhörigstöd', url: 'https://www.1177.se/Regler-och-rattigheter/Anhorigstod/' },

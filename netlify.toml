@@ -1,3 +1,33 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+# orter som inte längre ingår
+[[redirects]]
+  from = "/angelholm/"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/munka-ljungby/"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/vejbystrand/"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/skalderviken/"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/strovelstorp/"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/hjarnarp/"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/guider/anhorigstod-hoganas-och-angelholm/"
+  to = "/guider/anhorigstod-i-hoganas-kommun/"
+  status = 301

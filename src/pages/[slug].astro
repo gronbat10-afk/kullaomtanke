@@ -11,7 +11,7 @@ const url = `https://kullaomtanke.se/${s.slug}/`;
 const schema = [
   { '@context': 'https://schema.org', '@type': 'Service', name: s.short, serviceType: s.short, url,
     provider: { '@id': 'https://kullaomtanke.se/#foretag' },
-    areaServed: ['Höganäs kommun', 'Ängelholm'],
+    areaServed: ['Höganäs kommun'],
     offers: { '@type': 'Offer', priceCurrency: 'SEK', price: String(site.hourlyBefore), description: `${site.hourlyBefore} kr per timme inklusive moms före RUT-avdrag, ${site.hourly} kr efter RUT-avdrag där tjänsten ger avdrag.` } },
   { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: s.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
