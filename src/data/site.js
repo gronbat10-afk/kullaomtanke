@@ -26,6 +26,10 @@ export const places = [
   { name: 'Arild', slug: 'arild', page: true },
   { name: 'Munka-Ljungby', slug: 'munka-ljungby', page: true },
   { name: 'Vejbystrand', slug: 'vejbystrand', page: true },
+  { name: 'Lerberget', slug: 'lerberget', page: true },
+  { name: 'Skälderviken', slug: 'skalderviken', page: true },
+  { name: 'Strövelstorp', slug: 'strovelstorp', page: true },
+  { name: 'Hjärnarp', slug: 'hjarnarp', page: true },
 ];
 
 export const services = [
@@ -293,6 +297,65 @@ export const extraServices = [
       { q: 'Gör ni omvårdnad?', a: 'Nej. Vi hjälper inte till med personlig hygien eller medicinering, det sköter hemtjänsten.' },
     ],
   },
+  {
+    slug: 'hjalp-efter-sjukhusvistelse',
+    short: 'Hjälp efter sjukhusvistelse',
+    title: 'Hjälp hemma efter sjukhusvistelse för äldre | Kulla Omtanke',
+    description: 'Hemma igen efter sjukhuset? Vi hjälper till med handling, apotek, tvätt och sällskap de första veckorna i Höganäs och Ängelholm. RUT-avdrag.',
+    h1: 'Hjälp hemma efter en sjukhusvistelse',
+    lead: 'De första veckorna hemma efter sjukhuset är ofta de tuffaste. Orken är inte tillbaka, kylskåpet är tomt och det finns recept att hämta ut. Vi finns där under tiden det tar att komma på fötter igen.',
+    rut: 'Ärenden, apoteksbesök, tvätt och promenader ger RUT-avdrag, 290 kr i timmen inklusive moms efter avdraget.',
+    sections: [
+      { h: 'Det här brukar behövas', list: [
+        'Fylla på kylskåpet och handla det som behövs',
+        'Hämta ut medicin på apoteket',
+        'Tvätt, bädda rent och lite städning',
+        'Följa med på återbesök och kontroller',
+        'En kort promenad när orken börjar komma tillbaka',
+        'Sällskap, så att dagarna inte blir för långa',
+      ] },
+      { h: 'Under en period eller längre', p: [
+        'Många bokar oss några gånger i veckan under de första veckorna och trappar sedan ner. Det finns ingen bindningstid, så ni bestämmer själva hur länge.',
+      ] },
+      { h: 'Vi gör ingen vård', p: [
+        'Sårvård, medicinering och personlig omvårdnad sköts av hemsjukvården och hemtjänsten. Vi står för det praktiska och sällskapet runt omkring.',
+      ] },
+    ],
+    faq: [
+      { q: 'Hur snabbt kan ni börja?', a: 'Hör av er så tidigt som möjligt, gärna innan hemgången. Då kan vi oftast börja direkt när din förälder kommer hem.' },
+      { q: 'Kan anhöriga boka åt sin förälder?', a: 'Ja. Du kan boka och betala och ändå få RUT-avdrag, och du får en kort rapport efter varje besök.' },
+      { q: 'Måste vi ha hemtjänst först?', a: 'Nej. Vi bokas direkt utan biståndsbeslut och kan vara ett komplement om ni också har hemtjänst.' },
+    ],
+  },
+  {
+    slug: 'utflykter-for-aldre-med-rullstol',
+    short: 'Utflykter med rullstol',
+    title: 'Utflykter för äldre med rullstol eller rollator | Kulla Omtanke',
+    description: 'Vår bil rymmer rullstol och rollator. Vi följer med på utflykter, fika vid havet och ärenden i Kullabygden. Betalt för tiden, aldrig per resa.',
+    h1: 'Utflykter för dig med rullstol eller rollator',
+    lead: 'Att komma ut en stund gör stor skillnad, även när det är krångligt att ta sig fram. Vår bil har gott om plats för rullstol och rollator, och vi tar oss den tid som behövs.',
+    rut: 'Ärenden och promenader ger RUT-avdrag. Själva resan och rena nöjesutflykter ger inte avdrag, då gäller ordinarie pris på 580 kr i timmen inklusive moms.',
+    sections: [
+      { h: 'Exempel på utflykter', list: [
+        'En fika vid havet i Mölle, Arild eller Höganäs',
+        'En promenad längs Rönne å i Ängelholm',
+        'Ett besök hos en vän eller på en anhörigs grav',
+        'Handla kläder eller en present på stan',
+        'Komma till en träff, kyrkan eller en förening',
+      ] },
+      { h: 'Så går det till', p: [
+        'Vi hämtar hemma, hjälper till ut i bilen och har med oss rullstolen eller rollatorn. Väl framme går vi i lugn takt och tar pauser när det behövs.',
+      ] },
+      { h: 'Betalt för tiden, inte per resa', p: [
+        'Vi tar betalt per timme för tiden vi är tillsammans. Det finns ingen avgift per resa eller per kilometer.',
+      ] },
+    ],
+    faq: [
+      { q: 'Kan ni hjälpa till att förflytta från rullstol till bil?', a: 'Vi hjälper gärna till med stöd, men vi gör inga lyft som kräver lyfthjälpmedel. Berätta hur det brukar fungera så hittar vi ett tryggt sätt.' },
+      { q: 'Kostar resan extra?', a: 'Nej. Du betalar för tiden, aldrig per resa eller kilometer.' },
+      { q: 'Får man RUT-avdrag för utflykter?', a: 'Ärenden och promenader ger avdrag. Rena nöjesutflykter och själva resan gör det inte.' },
+    ],
+  },
 ];
 
 export const morePlaces = {
@@ -303,6 +366,10 @@ export const morePlaces = {
   arild: { name: 'Arild', kommun: 'Höganäs kommun', title: 'Sällskap och hemhjälp för äldre i Arild | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Arild. Samma person varje gång och rapport till anhöriga. RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Arild', lead: 'Vi hjälper äldre i Arild med sällskap, promenader och ärenden, så att det går att bo kvar hemma i fiskeläget.', p: ['En promenad i fiskeläget, en fika och ett ärende i Höganäs. Bilen har plats för rullstol och rollator.', 'Samma person kommer varje gång, och de anhöriga får veta hur det gick.'] },
   'munka-ljungby': { name: 'Munka-Ljungby', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Munka-Ljungby | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Munka-Ljungby. Samma person varje gång. 290 kr/tim efter RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Munka-Ljungby', lead: 'Vi besöker äldre i Munka-Ljungby med sällskap, promenader och hjälp med ärenden, som ett komplement till hemtjänsten.', p: ['Ärenden i Ängelholm blir enkla när vi tar bilen tillsammans. Annars blir det en promenad i närområdet och en fika hemma.', 'De anhöriga får en kort rapport efter varje besök.'] },
   vejbystrand: { name: 'Vejbystrand', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Vejbystrand | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Vejbystrand. Samma person varje gång och rapport till anhöriga. RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Vejbystrand', lead: 'Vi hjälper äldre i Vejbystrand med sällskap, promenader vid havet och ärenden.', p: ['En promenad längs stranden, handling i Ängelholm och en fika hemma. Vi anpassar besöken efter vad som passar.', 'Samma person kommer varje gång, och familjen får en rapport efteråt.'] },
+  lerberget: { name: 'Lerberget', kommun: 'Höganäs kommun', title: 'Sällskap och hemhjälp för äldre i Lerberget | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Lerberget och Ingelsträde. Samma person varje gång och rapport till anhöriga. RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Lerberget', lead: 'Vi hjälper äldre i Lerberget och Ingelsträde med sällskap, promenader och ärenden, som ett komplement till hemtjänsten.', p: ['En promenad ner mot hamnen, ett ärende i Höganäs och en kopp kaffe hemma efteråt. Vi tar det i den takt som passar.', 'Det är samma person som kommer varje gång. Bor barnen på annat håll får de en kort rapport efter varje besök.'] },
+  skalderviken: { name: 'Skälderviken', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Skälderviken | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Skälderviken. Samma person varje gång och rapport till anhöriga. 290 kr/tim efter RUT.', h1: 'Sällskap och vardagshjälp för äldre i Skälderviken', lead: 'Vi besöker äldre i Skälderviken med sällskap, promenader och hjälp med ärenden i Ängelholm.', p: ['En promenad längs viken, handling på vägen hem och en fika. Bilen rymmer både rullstol och rollator, så längre ärenden blir enkla.', 'Familjen får en kort rapport efter varje besök, så att alla vet hur veckan har varit.'] },
+  strovelstorp: { name: 'Strövelstorp', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Strövelstorp | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Strövelstorp. Ett komplement till hemtjänsten med samma person varje gång. RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Strövelstorp', lead: 'Vi hjälper äldre i Strövelstorp med sällskap, promenader och ärenden, så att vardagen blir lite lättare.', p: ['Mycket av det som behövs finns inne i Ängelholm. Vi tar bilen tillsammans till apoteket, affären eller vårdcentralen och fikar på vägen hem.', 'Vi kommer på fasta tider med samma person, och anhöriga får en rapport efter besöket.'] },
+  hjarnarp: { name: 'Hjärnarp', kommun: 'Ängelholms kommun', title: 'Sällskap och hemhjälp för äldre i Hjärnarp | Kulla Omtanke', description: 'Sällskap, promenader och ärenden för äldre i Hjärnarp. Samma person varje gång och rapport till anhöriga. 290 kr/tim efter RUT-avdrag.', h1: 'Sällskap och vardagshjälp för äldre i Hjärnarp', lead: 'På landsbygden kan veckorna bli långa. Vi besöker äldre i Hjärnarp med sällskap, promenader och hjälp med ärenden.', p: ['Vi hjälper till med handling och ärenden i Ängelholm, en promenad i närheten och en pratstund hemma.', 'Samma person kommer varje gång. Anhöriga får en kort rapport efter varje besök.'] },
 };
 
 export const guides = [
@@ -342,6 +409,75 @@ export const guides = [
       { h: 'Om du bor nära', list: ['Gör besöken regelbundna, så att det finns något att se fram emot', 'Ta med på små utflykter, även korta', 'Hjälp till att komma till träffar, kyrkan eller en förening'] },
       { h: 'Om du bor långt bort', list: ['Ring på fasta tider', 'Lär ut videosamtal, så att barnbarnen syns', 'Skicka vykort och bilder, gärna på papper', 'Låt någon på plats göra fasta besök'] },
       { h: 'Lokala mötesplatser', p: ['PRO, SPF Seniorerna, kyrkan och kommunens träffpunkter ordnar aktiviteter för äldre i både Höganäs och Ängelholm.'] },
+    ],
+  },
+  {
+    slug: 'sa-ansoker-du-om-hemtjanst',
+    title: 'Så ansöker du om hemtjänst i Höganäs och Ängelholm',
+    short: 'Så ansöker du om hemtjänst',
+    description: 'Steg för steg: så ansöker du eller din förälder om hemtjänst i Höganäs eller Ängelholms kommun, vad biståndshandläggaren gör och vad som händer sedan.',
+    intro: 'Hemtjänst är kommunens stöd till den som behöver hjälp för att klara vardagen hemma. Det är kommunen som avgör vem som har rätt till hemtjänst, och processen är i stort sett densamma i Höganäs och Ängelholm.',
+    sections: [
+      { h: '1. Kontakta kommunen', p: ['Ring kommunens växel eller kundtjänst och säg att du vill ansöka om hemtjänst. Det är den som ska få hjälpen som ansöker, men en anhörig kan hjälpa till med kontakten om föräldern vill det.'] },
+      { h: '2. Samtal med en biståndshandläggare', p: ['En biståndshandläggare utreder behovet, ofta vid ett hembesök. Där pratar ni om vad som fungerar och vad som är svårt i vardagen, till exempel att handla, städa, laga mat eller sköta hygienen.'] },
+      { h: '3. Beslut', p: ['Handläggaren fattar ett beslut om vilka insatser som beviljas. Får man avslag går det att överklaga, och beslutet ska innehålla information om hur man gör.'] },
+      { h: '4. Hemtjänsten startar', p: ['När beslutet är klart startar hemtjänsten. Insatserna följs upp efter en tid och kan ändras om behoven ändras.'] },
+      { h: 'Det hemtjänsten sällan hinner med', list: ['Längre promenader i egen takt', 'Sällskap och samtal utan tidspress', 'Att följa med på ärenden och utflykter', 'Samma person varje gång'] },
+      { h: 'Ett komplement utan ansökan', p: ['Kulla Omtanke bokas direkt, utan ansökan eller beslut. Många kombinerar hemtjänst för det nödvändiga med fasta besök från oss för sällskap och ärenden.'] },
+    ],
+  },
+  {
+    slug: 'anhorigstod-hoganas-och-angelholm',
+    title: 'Anhörigstöd i Höganäs och Ängelholm: det här finns att få',
+    short: 'Anhörigstöd i Höganäs och Ängelholm',
+    description: 'Hjälper du en äldre förälder eller partner? Kommunen ska enligt lag erbjuda stöd till anhöriga. Här är vad som finns i Höganäs och Ängelholm.',
+    intro: 'Den som hjälper en äldre eller långvarigt sjuk närstående gör ofta ett stort jobb i det tysta. Kommunen ska enligt socialtjänstlagen erbjuda stöd till anhöriga, och du har rätt att be om det även om du inte bor ihop med den du hjälper.',
+    sections: [
+      { h: 'Vanliga former av anhörigstöd', list: ['Samtal med en anhörigkonsulent', 'Anhöriggrupper och träffar med andra i samma situation', 'Avlösning i hemmet, så att du kan gå ifrån en stund', 'Växelvård, där din närstående bor på ett boende under en period', 'Föreläsningar och information om till exempel demenssjukdom'] },
+      { h: 'Höganäs kommun', p: ['Höganäs kommun har anhörigstöd med bland annat träffar, information och särskilt stöd för anhöriga till personer med demenssjukdom. Ring socialförvaltningen via kommunens växel, 042 33 71 00, och be att få prata med anhörigstödet.'] },
+      { h: 'Ängelholms kommun', p: ['I Ängelholm går du via kommunens kundtjänst, som kan koppla dig vidare till anhörigstödet och svara på frågor om äldreomsorg.'] },
+      { h: 'Privat avlastning som komplement', p: ['Kommunens avlösning kräver ofta en ansökan. Behöver du avlastning snabbt, eller vill ha samma person varje gång, kan Kulla Omtanke ta över några timmar i veckan med sällskap, promenader och ärenden.'] },
+    ],
+    source: { name: '1177: Anhörigstöd', url: 'https://www.1177.se/Regler-och-rattigheter/Anhorigstod/' },
+  },
+  {
+    slug: 'prata-med-din-foralder-om-hjalp',
+    title: 'Så pratar du med din förälder om att ta emot hjälp',
+    short: 'Prata med din förälder om hjälp',
+    description: 'Mamma säger att allt är bra, men du ser att det inte är det. Tips för samtalet om hjälp i vardagen, utan att ta över eller skapa konflikt.',
+    intro: 'Många äldre vill inte vara till besvär och säger nej till hjälp, även när de skulle må bra av den. Samtalet går ofta lättare om det handlar om att göra livet roligare, inte om vad som inte längre fungerar.',
+    sections: [
+      { h: 'Välj ett lugnt tillfälle', p: ['Ta samtalet när ni har tid, gärna hemma och inte mitt i en kris. Det är lättare att prata om framtiden när inget brådskar.'] },
+      { h: 'Utgå från det din förälder vill', list: ['Vad skulle du vilja göra mer av?', 'Vad saknar du mest från förr?', 'Vad tar mest energi i veckan?'] },
+      { h: 'Gör det litet och konkret', p: ['Att prata om hemhjälp kan kännas stort. Ett förslag om en fast promenad och fika i veckan med samma person känns ofta mindre främmande.'] },
+      { h: 'Låt beslutet vara förälderns', p: ['Föreslå att ni provar några gånger och utvärderar. Den som får vara med och bestämma säger oftare ja.'] },
+      { h: 'Vanliga invändningar', list: ['"Jag klarar mig själv." Visst, det här handlar om att få mer tid till det roliga.', '"Det blir för dyrt." Med RUT-avdrag blir priset hälften, och det finns ingen bindningstid.', '"Jag vill inte ha främlingar hemma." Det är samma person varje gång, och första mötet är kostnadsfritt.'] },
+    ],
+  },
+  {
+    slug: 'forebygg-fallolyckor-hemma',
+    title: 'Förebygg fallolyckor hemma: en checklista för äldre och anhöriga',
+    short: 'Förebygg fallolyckor hemma',
+    description: 'Fallolyckor är den vanligaste orsaken till att äldre skadar sig. En enkel checklista för ett tryggare hem, och vad du som anhörig kan göra.',
+    intro: 'Varje år faller fler än 100 000 personer som är 65 år eller äldre så illa att de behöver söka vård, och omkring 70 000 läggs in på sjukhus. Många fall går att förebygga med enkla medel.',
+    sections: [
+      { h: 'Checklista för hemmet', list: ['Ta bort lösa mattor eller sätt halkskydd under', 'Fäst sladdar längs golvlisten', 'Ha bra belysning, även nattlampa till badrummet', 'Sätt upp handtag i dusch och vid toaletten', 'Ställ det som används ofta i lagom höjd', 'Använd stadiga skor eller halkstrumpor inomhus'] },
+      { h: 'Rörelse håller balansen uppe', p: ['Regelbundna promenader och lite vardagsmotion stärker benen och balansen. Det är ofta lättare att komma iväg om någon följer med.'] },
+      { h: 'Prata med vården', p: ['Yrsel, nya mediciner eller sämre syn kan öka risken att falla. Ta upp det med vårdcentralen, som också kan hänvisa till fysioterapeut eller arbetsterapeut.'] },
+      { h: 'Så kan vi hjälpa till', p: ['Vi följer med på promenader i lugn takt, hjälper till med handling så att tunga kassar slipper bäras och säger till anhöriga om vi ser något i hemmet som verkar riskabelt.'] },
+    ],
+    source: { name: 'Socialstyrelsen: Fallolyckor', url: 'https://www.socialstyrelsen.se/fallolyckor' },
+  },
+  {
+    slug: 'ledsagarservice-eller-privat-ledsagning',
+    title: 'Ledsagarservice eller privat ledsagning: vad är skillnaden?',
+    short: 'Ledsagarservice eller privat ledsagning',
+    description: 'Ledsagarservice från kommunen kräver ett biståndsbeslut. Privat ledsagning bokar du direkt. Så skiljer sig de åt och när de passar.',
+    intro: 'Ledsagning betyder att någon följer med, till exempel på en promenad, till läkaren eller på ett ärende. Det finns två vägar: kommunens ledsagarservice och privat ledsagning som du bokar själv.',
+    sections: [
+      { h: 'Kommunens ledsagarservice', list: ['Kräver en ansökan och ett beslut från en biståndshandläggare', 'Riktar sig främst till personer med funktionsnedsättning', 'Omfattningen styrs av beslutet', 'Avgiften följer kommunens taxa'] },
+      { h: 'Privat ledsagning', list: ['Bokas direkt utan ansökan', 'Ni bestämmer själva när och hur ofta', 'Samma person varje gång', 'Promenader och ärenden ger RUT-avdrag'] },
+      { h: 'Går det att kombinera?', p: ['Ja. Många har insatser från kommunen och bokar privat ledsagning för det som inte ryms i beslutet, till exempel en extra promenad eller en utflykt.'] },
     ],
   },
 ];
