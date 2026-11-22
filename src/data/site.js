@@ -54,7 +54,7 @@ export const services = [
     faq: [
       { q: 'Hur ofta kan vi boka sällskap?', a: 'De flesta väljer två timmar i veckan eller varannan vecka. Det går att lägga till fler besök när det behövs.' },
       { q: 'Kan vi göra något utanför hemmet?', a: 'Ja. Vi följer gärna med på promenad, till affären eller till ett café. Vår bil har plats för rullstol och rollator.' },
-      { q: 'Får man RUT-avdrag för sällskap?', a: 'Inte för rent sällskap. Promenader, ärenden, tvätt och teknikhjälp i hemmet ger däremot RUT, och vi planerar besöken så att de innehåller sådant.' },
+      { q: 'Får man RUT-avdrag för sällskap?', a: 'Inte för rent sällskap. Promenader, ärenden och tvätt i hemmet ger däremot RUT, och vi planerar besöken så att de innehåller sådant.' },
     ],
   },
   {
@@ -116,32 +116,27 @@ export const services = [
   },
   {
     slug: 'teknikhjalp-for-seniorer',
-    short: 'Teknikhjälp för seniorer',
-    title: 'Teknikhjälp för seniorer i hemmet | Kulla Omtanke',
-    description: 'Lugn och tålmodig teknikhjälp för seniorer hemma: mobil, surfplatta, mejl, BankID, wifi, tv och videosamtal. Höganäs kommun och Ängelholm. RUT-avdrag.',
-    h1: 'Teknikhjälp för seniorer, hemma och i lugn takt',
-    lead: 'Mobilen som krånglar, tv-kanalerna som försvann eller videosamtalet till barnbarnen som aldrig blir av. Vi har lång erfarenhet av IT och visar steg för steg, så många gånger som behövs.',
-    rut: 'Teknikhjälp som utförs i hemmet ger RUT-avdrag. Ett enstaka besök på 1,5 timme kostar 435 kr inklusive moms efter avdraget.',
+    short: 'Hjälp med mobil och tv',
+    title: 'Enklare hjälp med mobil och tv för äldre | Kulla Omtanke',
+    description: 'Enklare hjälp med mobilen, tv:n och videosamtal med familjen, som en del av besöket. Höganäs kommun och Ängelholm. RUT-avdrag, 290 kr/tim efter avdrag.',
+    h1: 'Enklare hjälp med mobil, tv och videosamtal',
+    lead: 'Ibland krånglar mobilen eller tv:n, eller så vill man ringa ett videosamtal till barnbarnen. Vi hjälper gärna till med det enkla, i lugn takt, som en del av besöket.',
+    rut: 'Hjälp med teknik som utförs i hemmet ger RUT-avdrag, 290 kr i timmen inklusive moms efter avdraget.',
     sections: [
-      { h: 'Det här brukar vi hjälpa till med', list: [
-        'Ställa in och lära sig mobilen eller surfplattan',
-        'Videosamtal med familjen via FaceTime, WhatsApp eller Messenger',
-        'Mejl, sms och bilder',
-        'Wifi, skrivare och tv-kanaler',
-        'Att själv använda BankID, Kivra och 1177 tryggt',
-        'Känna igen bedrägerier och falska sms',
+      { h: 'Det här kan vi hjälpa till med', list: [
+        'Ringa, svara och skicka sms i mobilen',
+        'Videosamtal med familjen',
+        'Hitta tv-kanalerna igen',
+        'Titta på bilder som familjen skickat',
       ] },
-      { h: 'Vi lär ut, så att du klarar det själv', p: [
-        'Målet är att du ska kunna själv nästa gång. Vi skriver gärna en enkel lathund på papper som får ligga bredvid telefonen.',
-      ] },
-      { h: 'Råd om teknik som gör vardagen enklare', p: [
-        'Vi tipsar också om saker som kan göra livet lättare, till exempel en enklare telefon, en digital fotoram som familjen fyller med bilder eller en högtalare som påminner om medicinen.',
+      { h: 'Enkelt och i lugn takt', p: [
+        'Vi visar steg för steg och skriver gärna en liten lapp som kan ligga bredvid telefonen. Det handlar om vardagliga saker, inte om att laga datorer eller installera nya system.',
       ] },
     ],
     faq: [
-      { q: 'Loggar ni in med mitt BankID?', a: 'Nej, aldrig. Vi visar hur du gör själv och står bredvid, men koder och BankID hanterar bara du.' },
-      { q: 'Kan ni hjälpa till per telefon?', a: 'Teknikhjälp per telefon ger inte RUT-avdrag, så vi gör den hemma hos dig. Det blir oftast också enklare när vi sitter bredvid varandra.' },
-      { q: 'Kan jag boka bara ett teknikbesök?', a: 'Ja. Ett enstaka teknikbesök på 1,5 timme kostar 435 kr inklusive moms efter RUT-avdrag.' },
+      { q: 'Loggar ni in med mitt BankID?', a: 'Nej, aldrig. Koder och BankID hanterar bara du.' },
+      { q: 'Kan ni laga min dator?', a: 'Nej, vi hjälper bara till med enklare saker som mobilen, tv:n och videosamtal. För reparationer rekommenderar vi en datorbutik.' },
+      { q: 'Ger hjälp med teknik RUT-avdrag?', a: 'Ja, när hjälpen ges hemma hos dig.' },
     ],
   },
   {
@@ -176,9 +171,9 @@ export const placePages = {
   hoganas: {
     name: 'Höganäs',
     title: 'Hemhjälp och sällskap för äldre i Höganäs | Kulla Omtanke',
-    description: 'Sällskap, promenader, ärenden och teknikhjälp för äldre i Höganäs, Viken, Jonstorp, Nyhamnsläge, Mölle och Arild. Samma person varje gång. 290 kr/tim efter RUT.',
+    description: 'Sällskap, promenader och ärenden för äldre i Höganäs, Viken, Jonstorp, Nyhamnsläge, Mölle och Arild. Samma person varje gång. 290 kr/tim efter RUT.',
     h1: 'Sällskap och hemhjälp för äldre i Höganäs',
-    lead: 'Kulla Omtanke finns i Höganäs kommun. Vi hjälper äldre i Höganäs, Viken, Jonstorp, Nyhamnsläge, Mölle och Arild med sällskap, promenader, ärenden och teknik, som ett komplement till hemtjänsten.',
+    lead: 'Kulla Omtanke finns i Höganäs kommun. Vi hjälper äldre i Höganäs, Viken, Jonstorp, Nyhamnsläge, Mölle och Arild med sällskap, promenader, ärenden och vardagshjälp, som ett komplement till hemtjänsten.',
     p: [
       'Vi känner Kullabygden och vet var det finns bänkar längs strandpromenaden, var det är lätt att parkera vid apoteket och vilka caféer som är bra med rollator.',
       'En vanlig vecka kan innehålla en promenad i Höganäs hamn, ett ärende på vårdcentralen och en fika hemma. Efter varje besök får de anhöriga en kort rapport.',
@@ -188,9 +183,9 @@ export const placePages = {
   angelholm: {
     name: 'Ängelholm',
     title: 'Hemhjälp och sällskap för äldre i Ängelholm | Kulla Omtanke',
-    description: 'Sällskap, promenader, ärenden och teknikhjälp för äldre i Ängelholm. Ett komplement till hemtjänsten, samma person varje gång. 290 kr/tim efter RUT-avdrag.',
+    description: 'Sällskap, promenader och ärenden för äldre i Ängelholm. Ett komplement till hemtjänsten, samma person varje gång. 290 kr/tim efter RUT-avdrag.',
     h1: 'Sällskap och hemhjälp för äldre i Ängelholm',
-    lead: 'Vi hjälper äldre i Ängelholm med sällskap, promenader, ärenden, tvätt och teknik. Samma person kommer varje gång, och familjen får en rapport efter besöket.',
+    lead: 'Vi hjälper äldre i Ängelholm med sällskap, promenader, ärenden och tvätt. Samma person kommer varje gång, och familjen får en rapport efter besöket.',
     p: [
       'En promenad längs Rönne å, en fika på stan eller hjälp att handla på vägen hem. Vi anpassar besöken efter vad som passar just er.',
       'Många av våra kunder har hemtjänst som sköter det nödvändiga. Vi står för tiden däremellan, med sällskap och det där lilla extra som gör veckan lättare.',

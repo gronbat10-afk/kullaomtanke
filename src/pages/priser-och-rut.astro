@@ -4,7 +4,7 @@ import Faq from '../components/Faq.astro';
 import { site, plans } from '../data/site.js';
 const faq = [
   { q: 'Hur mycket RUT-avdrag kan man få?', a: 'RUT-avdraget är 50 procent av arbetskostnaden, upp till 75 000 kr per person och år. Avdraget dras direkt på fakturan.' },
-  { q: 'Vad ger inte RUT-avdrag?', a: 'Rent sällskap, att följa med på nöjen som bio eller restaurang, teknikhjälp per telefon och resor ger inte avdrag. Den tiden kostar 580 kr i timmen inklusive moms.' },
+  { q: 'Vad ger inte RUT-avdrag?', a: 'Rent sällskap, att följa med på nöjen som bio eller restaurang, hjälp per telefon och resor ger inte avdrag. Den tiden kostar 580 kr i timmen inklusive moms.' },
   { q: 'Hur fungerar faktureringen?', a: 'Ni får en faktura en gång i månaden för utförda besök, med RUT-avdraget redan gjort. Vi ansöker om resten hos Skatteverket.' },
   { q: 'Finns det bindningstid?', a: 'Nej. Det finns ingen bindningstid och uppsägningstiden är en vecka.' },
 ];
@@ -22,7 +22,7 @@ const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEnti
       <div class="grid">
         {plans.map((p) => (<div class="card"><h3>{p.name}</h3><p>{p.time}</p><p class="price">{p.price}</p><p style="font-size: 16px">{p.before} · inkl. moms</p><p>{p.text}</p></div>))}
       </div>
-      <p>Priserna är räknade på fyra veckor. Enstaka teknikbesök på 1,5 timme kostar 435 kr inkl. moms efter RUT.</p>
+      <p>Priserna är räknade på fyra veckor.</p>
     </div>
   </section>
   <section class="section white">
@@ -32,13 +32,13 @@ const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEnti
         <li>Promenader och att följa med på ärenden, till exempel vårdcentral, bank och affär</li>
         <li>Hjälp att betala räkningar och att läsa högt</li>
         <li>Tvätt och enklare städning i hemmet</li>
-        <li>Teknikhjälp i hemmet: mobil, dator, wifi och tv</li>
+        <li>Enklare hjälp med mobil och tv i hemmet</li>
       </ul>
       <h2>Det här ger inte RUT-avdrag</h2>
       <ul>
         <li>Tid som bara är sällskap och samtal</li>
         <li>Att följa med på bio, restaurang eller museum</li>
-        <li>Teknikhjälp per telefon</li>
+        <li>Hjälp per telefon</li>
       </ul>
       <p>Därför planerar vi besöken så att de nästan alltid innehåller något som ger avdrag. Källa: <a href="https://skatteverket.se/foretag/skatterochavdrag/rotochrut/gerarbetetratttillrutavdrag.html" rel="noopener">Skatteverket</a>.</p>
       <h2>Anhöriga kan betala</h2>

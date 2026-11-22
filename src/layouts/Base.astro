@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
 import { site, nav, services, places } from '../data/site.js';
-interface Props { title: string; description: string; schema?: object[]; cta?: boolean; }
-const { title, description, schema = [], cta = true } = Astro.props;
+interface Props { title: string; description: string; schema?: object[]; cta?: boolean; noindex?: boolean; }
+const { title, description, schema = [], cta = true, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const business = {
   '@context': 'https://schema.org',
@@ -14,8 +14,11 @@ const business = {
   telephone: site.phoneIntl,
   email: site.email,
   logo: 'https://kullaomtanke.se/img/kulla-omtanke-logo-640.png',
+  address: { '@type': 'PostalAddress', addressLocality: 'Höganäs', addressRegion: 'Skåne län', addressCountry: 'SE' },
+  knowsLanguage: 'sv',
   image: 'https://kullaomtanke.se/img/promenad-havet.webp',
   description: 'Sällskap och vardagshjälp för äldre i Höganäs kommun och Ängelholm. Samma person varje gång och rapport till anhöriga. RUT-avdrag.',
+  hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Tjänster', itemListElement: services.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.short, url: `https://kullaomtanke.se/${s.slug}/` } })) },
   priceRange: '290 kr/tim efter RUT',
   areaServed: places.map((p) => ({ '@type': 'City', name: p.name })),
 };
@@ -28,13 +31,23 @@ const business = {
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  {noindex && <meta name="robots" content="noindex, follow" />}
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#43512D" />
+  <meta property="og:site_name" content="Kulla Omtanke" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Kulla Omtanke, en extra närstående" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="sv_SE" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
-  <meta property="og:image" content="https://kullaomtanke.se/img/promenad-havet.webp" />
+  <meta property="og:image" content="https://kullaomtanke.se/img/og-kulla-omtanke.jpg" />
   <script type="application/ld+json" set:html={JSON.stringify(business)} />
   {schema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
 </head>
