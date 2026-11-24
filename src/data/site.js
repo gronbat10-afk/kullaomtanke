@@ -13,6 +13,7 @@ export const nav = [
   { label: 'Tjänster', href: '/#tjanster' },
   { label: 'För anhöriga', href: '/for-anhoriga/' },
   { label: 'Priser', href: '/priser-och-rut/' },
+  { label: 'Om oss', href: '/om-oss/' },
   { label: 'Kontakt', href: '/kontakt/' },
 ];
 

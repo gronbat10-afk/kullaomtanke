@@ -189,3 +189,6 @@ p { margin: 0; }
   .grid-services > :last-child:nth-child(3n+2) { grid-column: span 3; }
   .grid-services .card { padding: 30px 32px; }
 }
+
+/* om oss */
+.founder-img { width: 100%; max-width: 420px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 28px; display: block; }

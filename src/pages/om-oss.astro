@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'Om Kulla Omtanke',
+    url: 'https://kullaomtanke.se/om-oss/',
+    about: { '@id': 'https://kullaomtanke.se/#foretag' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Anna',
+    jobTitle: 'Grundare',
+    image: 'https://kullaomtanke.se/img/anna-grundare-kulla-omtanke.jpg',
+    worksFor: { '@id': 'https://kullaomtanke.se/#foretag' },
+  },
+];
+---
+<Base title="Om oss | Kulla Omtanke, sällskap och vardagshjälp för äldre i Höganäs" description="Kulla Omtanke är ett nystartat företag i Höganäs kommun som ger äldre sällskap och vardagshjälp. Grundaren Anna har lång erfarenhet inom service." schema={schema}>
+  <div class="wrap page-hero stack">
+    <p class="breadcrumbs"><a href="/">Start</a> / Om oss</p>
+    <h1>Om Kulla Omtanke</h1>
+    <p class="lead">Kulla Omtanke är ett nystartat företag i Höganäs kommun. Vi ger äldre sällskap och hjälp i vardagen, och vi vill vara den extra närstående som har tid när andra inte hinner.</p>
+  </div>
+
+  <section class="section white">
+    <div class="wrap split">
+      <div class="b">
+        <img class="founder-img" src="/img/anna-grundare-kulla-omtanke.webp" alt="Anna, grundare av Kulla Omtanke" width="400" height="400" loading="eager" />
+      </div>
+      <div class="a prose">
+        <p class="kicker">Grundaren</p>
+        <h2>Anna startade Kulla Omtanke</h2>
+        <p>Anna är grundare av Kulla Omtanke. Hon har lång erfarenhet inom service och vet hur mycket det betyder att bli bemött med tid, värme och respekt.</p>
+        <p>Med Kulla Omtanke vill hon använda den erfarenheten till att hjälpa andra. Det började med en enkel tanke: att många äldre i Kullabygden klarar sig bra, men saknar någon som har tid för en promenad, ett ärende eller en kopp kaffe och ett samtal.</p>
+        <p>I dag är det Anna själv som kommer på besöken. Målet är att växa med fler medarbetare som delar samma omtanke, och att varje kund alltid ska få träffa samma person.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap stack">
+      <h2>Det här är viktigt för oss</h2>
+      <div class="grid">
+        <div class="card light"><h3>Samma person varje gång</h3><p class="muted">Trygghet kommer av att känna den som kommer. Därför träffar du samma person vid varje besök.</p></div>
+        <div class="card light"><h3>Tid utan stress</h3><p class="muted">Vi har inget minutschema. Besöket får ta den tid det behöver, och promenaden går i din takt.</p></div>
+        <div class="card light"><h3>Anhöriga får veta hur det går</h3><p class="muted">Efter varje besök skickar vi en kort rapport till anhöriga, så att ingen behöver undra.</p></div>
+        <div class="card light"><h3>Lokalt i Kullabygden</h3><p class="muted">Vi finns i Höganäs kommun med omnejd och känner till affärerna, vårdcentralerna och de fina promenadstråken.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="wrap stack">
+      <h2>Ett nytt företag med gamla värden</h2>
+      <div class="prose">
+        <p>Som nystartat företag har vi möjlighet att bygga allt från grunden på det sätt vi tycker är rätt, med fasta tider, samma person och ett personligt bemötande. Kulla Omtanke är godkänt för F-skatt, och du får RUT-avdrag direkt på fakturan för promenader, ärenden och hjälp i hemmet.</p>
+      </div>
+    </div>
+  </section>
+</Base>
