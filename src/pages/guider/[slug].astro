@@ -1,13 +1,21 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ServiceCards from '../../components/ServiceCards.astro';
+import HelpBox from '../../components/HelpBox.astro';
 import { guides } from '../../data/site.js';
+import { rich } from '../../lib/rich.js';
 export function getStaticPaths() { return guides.map((g) => ({ params: { slug: g.slug }, props: { g } })); }
 const { g } = Astro.props;
 const url = `https://kullaomtanke.se/guider/${g.slug}/`;
+const idx = guides.findIndex((x) => x.slug === g.slug);
+const more = (g.relatedGuides || []).map((s) => guides.find((x) => x.slug === s)).filter(Boolean);
+for (let i = 1; more.length < 3 && i < guides.length; i++) {
+  const c = guides[(idx + i) % guides.length];
+  if (!more.includes(c)) more.push(c);
+}
 const schema = [
   { '@context': 'https://schema.org', '@type': 'Article', headline: g.title, description: g.description, inLanguage: 'sv', mainEntityOfPage: url,
-    author: { '@type': 'Organization', name: 'Kulla Omtanke' }, publisher: { '@id': 'https://kullaomtanke.se/#foretag' }, datePublished: '2026-11-22' },
+    author: { '@type': 'Organization', name: 'Kulla Omtanke' }, publisher: { '@id': 'https://kullaomtanke.se/#foretag' }, datePublished: g.date || '2026-11-22' },
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://kullaomtanke.se/' },
     { '@type': 'ListItem', position: 2, name: 'Guider', item: 'https://kullaomtanke.se/guider/' },
@@ -19,15 +27,18 @@ const schema = [
     <p class="breadcrumbs"><a href="/">Start</a> / <a href="/guider/">Guider</a> / {g.short}</p>
     <div class="prose">
       <h1>{g.title}</h1>
-      <p class="lead">{g.intro}</p>
+      <p class="lead" set:html={rich(g.intro)} />
       {g.sections.map((sec) => (
         <>
           <h2>{sec.h}</h2>
-          {sec.p && sec.p.map((t) => <p>{t}</p>)}
-          {sec.list && <ul>{sec.list.map((li) => <li>{li}</li>)}</ul>}
+          {sec.p && sec.p.map((t) => <p set:html={rich(t)} />)}
+          {sec.list && <ul>{sec.list.map((li) => <li set:html={rich(li)} />)}</ul>}
         </>
       ))}
       {g.source && <p class="muted">Källa: <a href={g.source.url} rel="noopener">{g.source.name}</a></p>}
+      <HelpBox related={g.related || []} />
+      <h2>Läs också</h2>
+      <ul class="related-guides">{more.map((m) => <li><a href={`/guider/${m.slug}/`}>{m.title}</a></li>)}</ul>
     </div>
   </article>
   <section class="section white"><div class="wrap stack"><h2>Så kan Kulla Omtanke hjälpa till</h2><ServiceCards /></div></section>

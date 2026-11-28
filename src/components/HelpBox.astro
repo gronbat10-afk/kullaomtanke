@@ -1,0 +1,18 @@
+---
+import { site, services, extraServices } from '../data/site.js';
+const { related = [], heading = 'Behöver din mamma eller pappa lite extra hjälp?' } = Astro.props;
+const all = [...services, ...extraServices];
+const items = related.map((slug) => all.find((s) => s.slug === slug)).filter(Boolean);
+---
+<aside class="helpbox">
+  <p class="kicker">Kulla Omtanke</p>
+  <h2>{heading}</h2>
+  <p>Vi hjälper äldre i Höganäs kommun med omnejd med ärenden, enklare hushållssysslor, promenader och sällskap. Samma person varje gång, och anhöriga får en kort rapport efter varje besök.</p>
+  <p class="helpbox-price"><strong>{site.hourly} kr/tim</strong> inklusive moms efter RUT-avdrag. Första mötet är kostnadsfritt.</p>
+  {items.length > 0 && (
+    <ul class="helpbox-links">
+      {items.map((s) => <li><a href={`/${s.slug}/`}>{s.short}</a></li>)}
+    </ul>
+  )}
+  <div class="btn-row"><a class="btn btn-primary" href="/kontakt/">Boka ett första möte</a><a class="btn btn-outline" href={`tel:${site.phoneIntl}`}>Ring {site.phone}</a></div>
+</aside>
