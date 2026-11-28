@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import Faq from '../components/Faq.astro';
+import { faqGeneral, site } from '../data/site.js';
+const groups = [
+  { h: 'Om tjänsten', items: [
+    { q: 'Vad hjälper Kulla Omtanke till med?', a: 'Vi hjälper äldre med ärenden och handling, enklare hushållssysslor, promenader, följe till läkaren och sällskap. Oftast blir varje besök en blandning av praktisk hjälp och en stund tillsammans.' },
+    { q: 'Var finns ni?', a: 'Vi hjälper till i Höganäs kommun med omnejd, bland annat Höganäs, Viken, Jonstorp, Nyhamnsläge, Mölle, Arild och Lerberget.' },
+    { q: 'Är det samma person varje gång?', a: 'Ja. Trygghet kommer av att känna den som kommer, därför träffar ni samma person vid varje besök.' },
+    { q: 'Gör ni vård eller omvårdnad?', a: 'Nej. Vi hjälper inte till med medicinering, personlig hygien eller annan omvårdnad. Det sköts av hemtjänsten och hemsjukvården.' },
+    { q: 'Kan ni skjutsa?', a: 'Ja, när det ingår i besöket, till exempel till affären, apoteket eller vårdcentralen. Bilen har plats för rullstol och rollator. Vi tar betalt för tiden, aldrig per resa.' },
+    ...faqGeneral,
+  ] },
+  { h: 'Pris och RUT-avdrag', items: [
+    { q: 'Vad kostar det?', a: `${site.hourly} kronor i timmen inklusive moms efter RUT-avdrag, ${site.hourlyBefore} kronor före avdraget. Första mötet är kostnadsfritt.` },
+    { q: 'Vilka tjänster ger RUT-avdrag?', a: 'Ärenden, handling, promenader, tvätt och städning i hemmet ger RUT-avdrag. Rena nöjesaktiviteter och själva resan gör det inte.' },
+    { q: 'Hur fungerar fakturan?', a: 'Ni får en faktura en gång i månaden där RUT-avdraget redan är gjort. Vi sköter ansökan hos Skatteverket.' },
+  ] },
+  { h: 'För anhöriga', items: [
+    { q: 'Får jag veta hur besöket gick?', a: 'Ja. Efter varje besök skickar vi en kort rapport via sms eller mejl om vad ni gjorde och hur din förälder verkade må.' },
+    { q: 'Vad gör vi om mamma eller pappa inte vill ha hjälp?', a: 'Det är vanligt i början. Därför börjar vi med en kostnadsfri fika utan förpliktelser, så att det känns som ett besök och inte som hjälp.' },
+    { q: 'Hur snabbt kan ni börja?', a: 'Hör av er så hittar vi en tid för ett första möte så snart som möjligt, gärna innan behovet blir akut.' },
+  ] },
+];
+const all = groups.flatMap((g) => g.items);
+const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: all.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }];
+---
+<Base title="Vanliga frågor om sällskap och vardagshjälp för äldre | Kulla Omtanke" description="Svar på vanliga frågor om Kulla Omtanke: vad vi hjälper till med, pris och RUT-avdrag, rapport till anhöriga och hur ni kommer igång i Höganäs kommun." schema={schema}>
+  <div class="wrap page-hero stack">
+    <p class="breadcrumbs"><a href="/">Start</a> / Vanliga frågor</p>
+    <h1>Vanliga frågor</h1>
+    <p class="lead">Här har vi samlat det vi oftast får frågor om. Hittar du inte svaret är du välkommen att ringa oss på {site.phone}.</p>
+  </div>
+  {groups.map((g, i) => (
+    <section class={i % 2 === 0 ? 'section white' : 'section'}><div class="wrap stack"><Faq items={g.items} heading={g.h} /></div></section>
+  ))}
+</Base>
